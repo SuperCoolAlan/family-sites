@@ -1,0 +1,55 @@
+---
+import type { Block } from '../../lib/cms'
+
+type Props = { block: Extract<Block, { blockType: 'testimonials' }> }
+const { block } = Astro.props
+---
+
+<section class="section tinted">
+  <div class="wrap">
+    {block.heading && <div class="section-head"><h2>{block.heading}</h2></div>}
+    <ul class="quotes">
+      {
+        (block.items ?? []).map((i) => (
+          <li class="card">
+            <blockquote>
+              <p>“{i.quote}”</p>
+            </blockquote>
+            <p class="who">
+              {i.author}
+              {i.location && <span>, {i.location}</span>}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .quotes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.15rem;
+  }
+
+  .who {
+    margin: 0;
+    font-weight: 700;
+    color: var(--cocoa-soft);
+  }
+</style>

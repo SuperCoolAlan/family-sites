@@ -11,6 +11,7 @@
     "build:cms": "pnpm --filter @family-sites/cms build",
     "seed": "pnpm --filter @family-sites/cms seed",
     "typecheck": "pnpm -r typecheck",
-    "build:fuel": "pnpm --filter fuel-mechanical build"
+    "build:fuel": "pnpm --filter fuel-mechanical build",
+    "build:ponies": "pnpm --filter sh-ponies-desserts build"
   }
 }

@@ -1,0 +1,68 @@
+---
+import { localHref, type Lang } from '../../i18n'
+import type { Block } from '../../lib/cms'
+import { isExternal, safeHref } from '../../lib/links'
+
+type Props = { block: Extract<Block, { blockType: 'cta' }>; lang: Lang }
+const { block, lang } = Astro.props
+---
+
+<section class="section">
+  <div class="wrap">
+    <div class:list={['cta', block.tone]}>
+      <h2>{block.heading}</h2>
+      {block.text && <p>{block.text}</p>}
+      {
+        (block.buttons ?? []).length > 0 && (
+          <div class="actions">
+            {(block.buttons ?? []).map((b) => {
+              const href = localHref(safeHref(b.href), lang)
+              return (
+                <a class="btn light" href={href} {...(isExternal(href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+                  {b.label}
+                </a>
+              )
+            })}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    position: relative;
+    overflow: hidden;
+    border-radius: calc(var(--radius) * 1.5);
+    padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 5vw, 3.5rem);
+    background:
+      radial-gradient(28rem 16rem at 100% 0%, rgb(255 255 255 / 14%), transparent 70%),
+      var(--berry);
+    color: #fff;
+    text-align: center;
+  }
+
+  .cta.urgent {
+    background: var(--cocoa);
+  }
+
+  h2 {
+    color: #fff;
+  }
+
+  p {
+    max-width: 36rem;
+    margin-inline: auto;
+    font-size: 1.125rem;
+    color: #fbe9ee;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+</style>

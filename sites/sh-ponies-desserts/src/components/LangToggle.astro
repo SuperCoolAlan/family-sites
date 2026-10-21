@@ -1,0 +1,85 @@
+---
+import { LOCALES, pagePath, t, type Lang } from '../i18n'
+
+type Props = { lang: Lang; slug?: string; tone?: 'light' | 'dark' }
+const { lang, slug = 'home', tone = 'light' } = Astro.props
+---
+
+<nav class:list={['lang', tone]} aria-label={t(lang).langNav}>
+  {
+    LOCALES.map((l) =>
+      l === lang ? (
+        <span class="current" lang={l} aria-current="true">
+          <abbr title={t(l).name}>{l.toUpperCase()}</abbr>
+        </span>
+      ) : (
+        <a href={pagePath(l, slug)} hreflang={l} lang={l} aria-label={t(l).switchTo}>
+          {l.toUpperCase()}
+        </a>
+      ),
+    )
+  }
+</nav>
+
+<style>
+  .lang {
+    display: inline-flex;
+    padding: 3px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+
+  .lang a,
+  .lang .current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 36px;
+    padding: 0 0.6rem;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+
+  .lang a {
+    color: var(--cocoa-soft);
+  }
+
+  .lang a:hover {
+    color: var(--berry-dark);
+    background: var(--blush);
+  }
+
+  .lang .current {
+    background: var(--cocoa);
+    color: var(--cream);
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .lang.dark {
+    background: transparent;
+    border-color: rgb(253 247 239 / 25%);
+  }
+
+  .lang.dark a {
+    color: var(--cream);
+  }
+
+  .lang.dark a:hover {
+    background: rgb(253 247 239 / 12%);
+    color: #fff;
+  }
+
+  .lang.dark .current {
+    background: var(--cream);
+    color: var(--cocoa-deep);
+  }
+</style>

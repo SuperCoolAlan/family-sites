@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from 'astro'
+
+import RenderBlocks from '../../components/RenderBlocks.astro'
+import { LOCALES, type Lang } from '../../i18n'
+import Base from '../../layouts/Base.astro'
+import { getLocale } from '../../lib/cms'
+
+export const getStaticPaths = (() => LOCALES.map((lang) => ({ params: { lang } }))) satisfies GetStaticPaths
+
+const lang = Astro.params.lang as Lang
+const { pages } = await getLocale(lang)
+const page = pages.find((p) => p.slug === 'home')!
+---
+
+<Base lang={lang} slug="home" title={page.meta?.title || page.title} description={page.meta?.description} image={page.meta?.image}>
+  <RenderBlocks blocks={page.layout} lang={lang} isHome />
+</Base>

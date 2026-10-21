@@ -1,0 +1,164 @@
+---
+import { localHref, type Lang } from '../../i18n'
+import { getLocale, type Block } from '../../lib/cms'
+import { safeHref } from '../../lib/links'
+import { mediaURL, srcset } from '../../lib/media'
+
+type Props = { block: Extract<Block, { blockType: 'hero' }>; lang: Lang }
+const { block, lang } = Astro.props
+const { settings } = await getLocale(lang)
+const full = block.size === 'full'
+const logo = mediaURL(settings.logo, 'card') ?? '/logo.png'
+const bg = block.backgroundImage
+---
+
+<section class:list={['hero', { full }]}>
+  {
+    bg && typeof bg === 'object' && (
+      <img class="bg" src={mediaURL(bg, 'hero')} srcset={srcset(bg)} sizes="100vw" alt="" fetchpriority="high" />
+    )
+  }
+  <div class="wrap inner">
+    <div class="copy">
+      {block.tagline && <p class="eyebrow">{block.tagline}</p>}
+      {full ? <h1>{block.heading}</h1> : <h1 class="compact-title">{block.heading}</h1>}
+      {block.subheading && <p class="lede">{block.subheading}</p>}
+      {
+        (block.buttons ?? []).length > 0 && (
+          <div class="actions">
+            {(block.buttons ?? []).map((b) => (
+              <a class:list={['btn', { secondary: b.style === 'secondary' }]} href={localHref(safeHref(b.href), lang)}>
+                {b.label}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </div>
+    {
+      full && block.showLogo && (
+        <div class="badge" aria-hidden="true">
+          <img src={logo} alt="" width="320" height="320" fetchpriority="high" />
+        </div>
+      )
+    }
+  </div>
+  <svg class="edge" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M0 40V20c60 0 60-20 120-20s60 20 120 20 60-20 120-20 60 20 120 20 60-20 120-20 60 20 120 20 60-20 120-20 60 20 120 20 60-20 120-20 60 20 120 20 60-20 120-20 60 20 120 20v20z" />
+  </svg>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, rgb(246 211 173 / 70%), transparent 60%),
+      radial-gradient(40rem 24rem at 0% 110%, rgb(249 228 224 / 90%), transparent 60%),
+      var(--blush);
+    padding-block: clamp(2.5rem, 7vw, 4rem) clamp(3.5rem, 8vw, 5rem);
+  }
+
+  .hero.full {
+    padding-block: clamp(3rem, 9vw, 6rem) clamp(4rem, 10vw, 7rem);
+  }
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+  }
+
+  .inner {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero:not(.full) .inner {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .full .inner {
+    grid-template-areas: 'badge' 'copy';
+  }
+
+  .copy {
+    max-width: 38rem;
+  }
+
+  .full .copy {
+    grid-area: copy;
+  }
+
+  h1 {
+    margin-bottom: 0.35em;
+  }
+
+  .compact-title {
+    font-size: clamp(2rem, 4vw + 0.75rem, 3.25rem);
+    margin-bottom: 0.25em;
+  }
+
+  .lede {
+    font-size: clamp(1.125rem, 1vw + 0.9rem, 1.35rem);
+    color: var(--cocoa-soft);
+    margin-bottom: 1.75rem;
+  }
+
+  .hero:not(.full) .lede {
+    margin-bottom: 0;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .badge {
+    grid-area: badge;
+    justify-self: center;
+    width: min(62vw, 240px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 10px;
+    background: var(--paper);
+    box-shadow:
+      0 0 0 10px rgb(255 253 249 / 55%),
+      var(--shadow);
+    rotate: -4deg;
+  }
+
+  .badge img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .edge {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 22px;
+    fill: var(--cream);
+  }
+
+  @media (min-width: 820px) {
+    .full .inner {
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-areas: 'copy badge';
+    }
+
+    .badge {
+      width: min(100%, 360px);
+    }
+  }
+</style>

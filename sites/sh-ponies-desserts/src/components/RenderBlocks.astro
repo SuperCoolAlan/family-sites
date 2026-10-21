@@ -1,0 +1,44 @@
+---
+import type { Lang } from '../i18n'
+import type { Block } from '../lib/cms'
+import ContactForm from './blocks/ContactForm.astro'
+import CTA from './blocks/CTA.astro'
+import FAQ from './blocks/FAQ.astro'
+import Features from './blocks/Features.astro'
+import Gallery from './blocks/Gallery.astro'
+import Hero from './blocks/Hero.astro'
+import Menu from './blocks/Menu.astro'
+import RichText from './blocks/RichText.astro'
+import Testimonials from './blocks/Testimonials.astro'
+
+type Props = { blocks?: Block[] | null; lang: Lang; isHome?: boolean }
+const { blocks, lang, isHome = false } = Astro.props
+---
+
+{
+  (blocks ?? []).map((block) => {
+    switch (block.blockType) {
+      case 'hero':
+        return <Hero block={block} lang={lang} />
+      case 'richText':
+        return <RichText block={block} />
+      case 'features':
+        return <Features block={block} />
+      case 'gallery':
+        return <Gallery block={block} lang={lang} hideWhenEmpty={isHome} />
+      case 'menu':
+        return <Menu block={block} />
+      case 'testimonials':
+        return <Testimonials block={block} />
+      case 'cta':
+        return <CTA block={block} lang={lang} />
+      case 'contactForm':
+        return <ContactForm block={block} lang={lang} />
+      case 'faq':
+        return <FAQ block={block} />
+      // servicesGrid and bookingEmbed aren't used by this site yet.
+      default:
+        return null
+    }
+  })
+}

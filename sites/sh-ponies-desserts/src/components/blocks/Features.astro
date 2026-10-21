@@ -1,0 +1,65 @@
+---
+import type { Block } from '../../lib/cms'
+
+type Props = { block: Extract<Block, { blockType: 'features' }> }
+const { block } = Astro.props
+// Decorative only, cycled by position: whisk, layered cake, heart.
+const icons = [
+  'M7 3c2.5 0 4 3 4 6.5S9.5 15 7 15s-4-2-4-5.5S4.5 3 7 3zm0 12v6m10-18c2.5 0 4 3 4 6.5S19.5 15 17 15s-4-2-4-5.5S14.5 3 17 3zm0 12v6',
+  'M4 21h16M5 21v-6h14v6M6 15v-4h12v4M12 11V7m0-4c.8 1 .8 2 0 3-.8-1-.8-2 0-3z',
+  'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z',
+]
+---
+
+<section class="section">
+  <div class="wrap">
+    {block.heading && <div class="section-head"><h2>{block.heading}</h2></div>}
+    <ul class="features">
+      {
+        (block.items ?? []).map((item, i) => (
+          <li class="card">
+            <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" focusable="false">
+              <path d={icons[i % icons.length]} />
+            </svg>
+            <h3>{item.title}</h3>
+            {item.text && <p>{item.text}</p>}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
+
+  .card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  svg {
+    fill: none;
+    stroke: var(--berry);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background: var(--blush);
+    border-radius: 50%;
+    padding: 8px;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--cocoa-soft);
+    margin: 0;
+  }
+</style>

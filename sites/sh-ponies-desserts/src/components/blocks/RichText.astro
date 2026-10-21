@@ -1,0 +1,24 @@
+---
+import type { Block } from '../../lib/cms'
+import { richTextToHTML } from '../../lib/richtext'
+
+type Props = { block: Extract<Block, { blockType: 'richText' }> }
+const { block } = Astro.props
+---
+
+<section class="section" id={block.anchor || undefined}>
+  <div class="wrap narrow">
+    {block.heading && <h2>{block.heading}</h2>}
+    <div class="rich-text" set:html={richTextToHTML(block.content)} />
+  </div>
+</section>
+
+<style>
+  .narrow {
+    max-width: 46rem;
+  }
+
+  .rich-text {
+    font-size: 1.125rem;
+  }
+</style>

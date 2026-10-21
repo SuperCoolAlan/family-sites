@@ -1,0 +1,395 @@
+---
+import { t, type Lang } from '../../i18n'
+import { getLocale, isObj, type Block, type Form } from '../../lib/cms'
+import { telHref, whatsappHref } from '../../lib/contact'
+import { richTextToHTML } from '../../lib/richtext'
+
+type Props = { block: Extract<Block, { blockType: 'contactForm' }>; lang: Lang }
+const { block, lang } = Astro.props
+const s = t(lang)
+const { settings, forms } = await getLocale(lang)
+
+const formId = isObj<Form>(block.form) ? block.form.id : block.form
+const form = forms.find((f) => f.id === formId) ?? (isObj<Form>(block.form) ? block.form : undefined)
+
+const endpoint = (import.meta.env.PUBLIC_PAYLOAD_URL || process.env.PAYLOAD_URL || '').replace(/\/+$/, '')
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined
+// Without an endpoint and Turnstile key the CMS would reject every submission, so point people elsewhere instead.
+const enabled = Boolean(form && endpoint && siteKey)
+const confirmation = richTextToHTML(form?.confirmationMessage)
+const wa = whatsappHref(settings.whatsapp, s.whatsappText)
+const facebook = (settings.socialLinks ?? []).find((l) => l.platform === 'facebook')?.url
+const today = new Date().toISOString().slice(0, 10)
+
+type Field = Exclude<NonNullable<Form['fields']>[number], { blockType: 'message' }>
+const inputType = (f: Field) =>
+  f.blockType === 'email' ? 'email' : f.blockType === 'number' ? 'number' : f.blockType === 'date' ? 'date' : /phone|tel|whatsapp/i.test(f.name) ? 'tel' : 'text'
+const autocomplete = (f: Field) =>
+  f.blockType === 'email' ? 'email' : f.name === 'name' ? 'name' : /phone|tel|whatsapp/i.test(f.name) ? 'tel' : undefined
+const wide = (f: Field) => f.blockType === 'textarea' || !('width' in f) || !f.width || f.width > 50
+---
+
+<section class="section">
+  <div class="wrap">
+    <div class:list={['layout', { single: !block.showContactInfo }]}>
+      <div class="card form-card">
+        <h2>{block.heading}</h2>
+        {block.intro && <p class="intro">{block.intro}</p>}
+        {
+          enabled && form ? (
+            <form
+              class="order-form"
+              data-endpoint={`${endpoint}/api/form-submissions?depth=0`}
+              data-form-id={String(form.id)}
+              data-sending={s.sending}
+              data-need-check={s.needCheck}
+              data-failed={`${s.failed}`}
+              data-failed-help={s.failedHelp}
+              novalidate
+            >
+              {(form.fields ?? []).map((f) => {
+                if (f.blockType === 'message') return <div class="rich-text full" set:html={richTextToHTML(f.message)} />
+                const id = `f-${f.name}`
+                const required = Boolean('required' in f && f.required)
+                const label = ('label' in f && f.label) || f.name
+                return (
+                  <div class:list={['field', { full: wide(f) }]}>
+                    {f.blockType !== 'checkbox' && (
+                      <label for={id}>
+                        {label}
+                        {required && (
+                          <span class="req" aria-hidden="true">
+                            {' '}*
+                          </span>
+                        )}
+                      </label>
+                    )}
+                    {f.blockType === 'textarea' ? (
+                      <textarea id={id} name={f.name} rows="4" required={required}>{f.defaultValue ?? ''}</textarea>
+                    ) : f.blockType === 'select' ? (
+                      <select id={id} name={f.name} required={required}>
+                        <option value="">{f.placeholder || s.choose}</option>
+                        {(f.options ?? []).map((o) => (
+                          <option value={o.value} selected={o.value === f.defaultValue}>
+                            {o.label}
+                          </option>
+                        ))}
+                      </select>
+                    ) : f.blockType === 'checkbox' ? (
+                      <label class="check">
+                        <input type="checkbox" id={id} name={f.name} checked={Boolean(f.defaultValue)} required={required} />
+                        {label}
+                      </label>
+                    ) : (
+                      <input
+                        id={id}
+                        name={f.name}
+                        type={inputType(f)}
+                        required={required}
+                        min={f.blockType === 'number' ? 1 : f.blockType === 'date' ? today : undefined}
+                        inputmode={f.blockType === 'number' ? 'numeric' : undefined}
+                        autocomplete={autocomplete(f)}
+                        value={'defaultValue' in f && f.defaultValue != null ? String(f.defaultValue) : undefined}
+                      />
+                    )}
+                  </div>
+                )
+              })}
+              {/* Honeypot: hidden from people, filled by naive bots; the CMS rejects any submission that sets it. */}
+              <div class="hp" aria-hidden="true">
+                <label for="f-website">Website</label>
+                <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="cf-turnstile full" data-sitekey={siteKey} data-language={lang}></div>
+              <button type="submit" class="btn full">
+                {form.submitButtonLabel}
+              </button>
+              <p class="status full" role="status" aria-live="polite"></p>
+              <div class="confirmation rich-text full" hidden tabindex="-1" set:html={confirmation} data-redirect={form.confirmationType === 'redirect' ? form.redirect?.url : undefined} />
+            </form>
+          ) : (
+            <p class="intro">
+              {s.formOff}
+              {facebook && (
+                <>
+                  {' '}
+                  <a href={facebook} rel="noopener noreferrer" target="_blank">
+                    Facebook
+                  </a>
+                </>
+              )}
+            </p>
+          )
+        }
+      </div>
+
+      {
+        block.showContactInfo && (
+          <aside class="card aside">
+            <h2 class="aside-title">{s.otherWays}</h2>
+            <ul>
+              {wa && (
+                <li>
+                  <a class="btn" href={wa} rel="noopener noreferrer" target="_blank">
+                    {s.whatsapp}
+                  </a>
+                </li>
+              )}
+              {settings.phone && (
+                <li>
+                  <span class="k">{s.call}</span> <a href={telHref(settings.phone)}>{settings.phone}</a>
+                </li>
+              )}
+              {settings.email && (
+                <li>
+                  <span class="k">{s.email}</span> <a href={`mailto:${settings.email}`}>{settings.email}</a>
+                </li>
+              )}
+              {facebook && (
+                <li>
+                  <span class="k">Facebook</span>{' '}
+                  <a href={facebook} rel="noopener noreferrer" target="_blank">
+                    {settings.businessName}
+                  </a>
+                </li>
+              )}
+              {settings.serviceArea && (
+                <li>
+                  <span class="k">{s.area}</span> {settings.serviceArea}
+                </li>
+              )}
+              {(settings.hours ?? []).length > 0 && (
+                <li>
+                  <span class="k">{s.hours}</span>
+                  {(settings.hours ?? []).map((h) => (
+                    <span class="hours">
+                      {h.days}: {h.hours}
+                    </span>
+                  ))}
+                </li>
+              )}
+            </ul>
+          </aside>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+{enabled && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<script>
+  type Turnstile = { reset: (el?: Element) => void }
+
+  for (const form of document.querySelectorAll<HTMLFormElement>('form.order-form')) {
+    const status = form.querySelector<HTMLElement>('.status')!
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!
+    const done = form.querySelector<HTMLElement>('.confirmation')!
+    const msg = form.dataset
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      if (!form.reportValidity()) return
+      const data = new FormData(form)
+      const token = String(data.get('cf-turnstile-response') ?? '')
+      if (!token) {
+        status.textContent = msg.needCheck ?? ''
+        return
+      }
+      const submissionData = [...form.querySelectorAll<HTMLInputElement>('.field [name]')]
+        .map((el) => ({ field: el.name, value: el.type === 'checkbox' ? String(el.checked) : el.value }))
+        .filter((r) => r.value !== '')
+
+      button.disabled = true
+      status.textContent = msg.sending ?? ''
+      try {
+        const res = await fetch(msg.endpoint!, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            form: Number(msg.formId) || msg.formId,
+            submissionData,
+            turnstileToken: token,
+            website: String(data.get('website') ?? ''),
+          }),
+        })
+        if (!res.ok) {
+          const body = await res.json().catch(() => null)
+          throw new Error(body?.errors?.[0]?.message || `HTTP ${res.status}`)
+        }
+        if (done.dataset.redirect) {
+          location.href = done.dataset.redirect
+          return
+        }
+        for (const el of form.querySelectorAll<HTMLElement>('.field, .cf-turnstile, button')) el.hidden = true
+        status.textContent = ''
+        done.hidden = false
+        done.focus()
+      } catch (err) {
+        status.textContent = `${msg.failed} (${(err as Error).message}). ${msg.failedHelp}`
+        button.disabled = false
+        ;(window as unknown as { turnstile?: Turnstile }).turnstile?.reset(form.querySelector('.cf-turnstile') ?? undefined)
+      }
+    })
+  }
+</script>
+
+<style>
+  .layout {
+    display: grid;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (min-width: 900px) {
+    .layout {
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    }
+
+    .layout.single {
+      grid-template-columns: minmax(0, 46rem);
+      justify-content: center;
+    }
+
+    .aside {
+      position: sticky;
+      top: 6rem;
+    }
+  }
+
+  .form-card,
+  .aside {
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+  }
+
+  .intro {
+    color: var(--cocoa-soft);
+  }
+
+  .order-form {
+    display: grid;
+    gap: 1.1rem 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (min-width: 560px) {
+    .order-form {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  .req {
+    color: var(--berry);
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.7rem 0.85rem;
+    border: 2px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--cocoa);
+    font: inherit;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 1px;
+    border-color: var(--cocoa-soft);
+  }
+
+  input:user-invalid,
+  select:user-invalid,
+  textarea:user-invalid {
+    border-color: var(--berry);
+  }
+
+  .check {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  .check input {
+    width: 1.25rem;
+    min-height: 1.25rem;
+  }
+
+  .hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .status {
+    margin: 0;
+    color: var(--cocoa-soft);
+  }
+
+  .status:empty {
+    display: none;
+  }
+
+  .confirmation {
+    padding: 1.25rem;
+    border-radius: var(--radius-sm);
+    background: var(--blush);
+    font-size: 1.125rem;
+  }
+
+  .aside-title {
+    font-size: 1.35rem;
+  }
+
+  .aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .k {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cocoa-soft);
+  }
+
+  .hours {
+    display: block;
+  }
+</style>

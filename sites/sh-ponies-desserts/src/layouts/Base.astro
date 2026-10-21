@@ -1,0 +1,89 @@
+---
+import '../styles/global.css'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import { DEFAULT_LANG, LOCALES, pagePath, t, type Lang } from '../i18n'
+import { getLocale, type Media } from '../lib/cms'
+import { mediaURL } from '../lib/media'
+
+interface Props {
+  lang: Lang
+  /** CMS page slug; gives the language toggle and hreflang links their targets. */
+  slug?: string
+  title?: string | null
+  description?: string | null
+  image?: Media | number | null
+}
+
+const { lang, slug } = Astro.props
+const { settings } = await getLocale(lang)
+const title = Astro.props.title || [settings.businessName, settings.tagline].filter(Boolean).join(' | ')
+const description = Astro.props.description || settings.description || ''
+const ogImage = mediaURL(Astro.props.image, 'card') ?? mediaURL(settings.logo, 'card') ?? new URL('/logo.png', Astro.site).href
+const canonical = new URL(Astro.url.pathname, Astro.site)
+const alternates = slug ? LOCALES.map((l) => ({ lang: l, href: new URL(pagePath(l, slug), Astro.site).href })) : []
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fdf7ef" />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="canonical" href={canonical} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+    {slug && <link rel="alternate" hreflang="x-default" href={new URL(pagePath(DEFAULT_LANG, slug), Astro.site)} />}
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={settings.businessName} />
+    <meta property="og:locale" content={t(lang).ogLocale} />
+    {LOCALES.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={t(l).ogLocale} />)}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#main">{t(lang).skip}</a>
+    <Header lang={lang} slug={slug} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} slug={slug} />
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: -100px;
+    z-index: 200;
+    padding: 0.75rem 1rem;
+    background: var(--cocoa);
+    color: var(--cream);
+    border-radius: var(--radius-sm);
+  }
+
+  .skip:focus {
+    top: 1rem;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+</style>

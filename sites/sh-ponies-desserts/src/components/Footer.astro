@@ -1,0 +1,143 @@
+---
+import { pagePath, t, type Lang } from '../i18n'
+import { getLocale } from '../lib/cms'
+import { telHref, whatsappHref } from '../lib/contact'
+import { mediaURL } from '../lib/media'
+import LangToggle from './LangToggle.astro'
+
+type Props = { lang: Lang; slug?: string }
+const { lang, slug } = Astro.props
+const s = t(lang)
+const { settings, pages } = await getLocale(lang)
+const links = pages
+  .filter((p) => typeof p.navOrder === 'number')
+  .sort((a, b) => (a.navOrder ?? 0) - (b.navOrder ?? 0))
+  .map((p) => ({ label: p.title, href: pagePath(lang, p.slug) }))
+const logo = mediaURL(settings.logo, 'thumbnail') ?? '/logo.png'
+const social = (settings.socialLinks ?? []).filter((l) => /^https:\/\//.test(l.url))
+const wa = whatsappHref(settings.whatsapp, s.whatsappText)
+const year = new Date().getFullYear()
+const label = (p: string) => p.charAt(0).toUpperCase() + p.slice(1)
+---
+
+<footer class="site-footer">
+  <div class="wrap grid">
+    <div class="brand">
+      <img src={logo} alt="" width="64" height="64" loading="lazy" />
+      <p class="name">{settings.businessName}</p>
+      {settings.footerBlurb && <p class="blurb">{settings.footerBlurb}</p>}
+    </div>
+
+    <div>
+      <h2>{s.pages}</h2>
+      <ul>
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div>
+      <h2>{s.contact}</h2>
+      <ul>
+        {wa && <li><a href={wa} rel="noopener noreferrer" target="_blank">{s.whatsapp}</a></li>}
+        {settings.phone && <li><a href={telHref(settings.phone)}>{settings.phone}</a></li>}
+        {settings.email && <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>}
+        {settings.serviceArea && <li>{s.area}: {settings.serviceArea}</li>}
+        {(settings.hours ?? []).map((h) => <li>{h.days}: {h.hours}</li>)}
+        {
+          social.map((l) => (
+            <li>
+              <a href={l.url} rel="noopener noreferrer" target="_blank">
+                {label(l.platform)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="wrap bottom">
+    <p>&copy; {year} {settings.businessName}. {s.rights}</p>
+    <LangToggle lang={lang} slug={slug} tone="dark" />
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--cocoa-deep);
+    color: #f3e6d8;
+    margin-top: auto;
+    padding-top: 3rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 720px) {
+    .grid {
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+    }
+  }
+
+  .brand img {
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+    border: 2px solid var(--apricot);
+  }
+
+  .name {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+  }
+
+  .blurb {
+    color: #e2cdb8;
+  }
+
+  h2 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--apricot);
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    color: var(--apricot);
+  }
+
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    padding-block: 1.25rem;
+    border-top: 1px solid rgb(253 247 239 / 15%);
+    font-size: 0.9rem;
+    color: #e2cdb8;
+  }
+
+  .bottom p {
+    margin: 0;
+  }
+</style>

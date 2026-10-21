@@ -1,0 +1,1937 @@
+{
+  "fetchedAt": "2026-10-21T20:48:52.669Z",
+  "tenant": {
+    "id": 2,
+    "name": "S&H Ponie’s Desserts",
+    "slug": "sh-ponies-desserts",
+    "domain": "poniesdesserts.asandov.com",
+    "languages": [
+      "es",
+      "en"
+    ],
+    "updatedAt": "2026-10-21T20:48:51.885Z",
+    "createdAt": "2026-10-21T20:24:33.010Z"
+  },
+  "locales": {
+    "es": {
+      "settings": {
+        "id": 2,
+        "tenant": {
+          "id": 2,
+          "name": "S&H Ponie’s Desserts",
+          "slug": "sh-ponies-desserts",
+          "domain": "poniesdesserts.asandov.com",
+          "languages": [
+            "es",
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:48:51.885Z",
+          "createdAt": "2026-10-21T20:24:33.010Z"
+        },
+        "businessName": "S&H Ponie’s Desserts",
+        "shortName": "S&H Ponie’s Desserts",
+        "tagline": "Postres hechos a mano",
+        "description": "Postres hechos a mano para eventos de cada tamaño: mini cheesecakes, pastelitos de hojaldre con fruta, tartaletas, gelatinas y mesas de postres.",
+        "logo": null,
+        "logoOnDark": null,
+        "phone": null,
+        "email": null,
+        "whatsapp": null,
+        "address": {
+          "street": null,
+          "city": null,
+          "state": null,
+          "zip": null,
+          "showOnSite": false
+        },
+        "serviceArea": "TODO: ciudad y zona de entrega",
+        "hours": [
+          {
+            "id": "6ad91f810e54e85f11ea1590",
+            "days": "TODO: días",
+            "hours": "TODO: horario para pedidos"
+          }
+        ],
+        "socialLinks": [
+          {
+            "id": "6ad91f810e54e85f11ea1591",
+            "platform": "facebook",
+            "url": "https://www.facebook.com/profile.php?id=61588069222223"
+          }
+        ],
+        "booking": {
+          "provider": "none",
+          "url": null,
+          "buttonLabel": "Reservar"
+        },
+        "footerBlurb": "Postres hechos a mano para eventos de cada tamaño.",
+        "footerServices": [],
+        "updatedAt": "2026-10-21T20:48:51.955Z",
+        "createdAt": "2026-10-21T20:24:33.125Z"
+      },
+      "pages": [
+        {
+          "id": 6,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Inicio",
+          "slug": "home",
+          "navOrder": 10,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea1594",
+              "showLogo": true,
+              "backgroundImage": null,
+              "size": "full",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea1592",
+                  "href": "/order",
+                  "style": "primary",
+                  "label": "Haz tu pedido"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1593",
+                  "href": "/menu",
+                  "style": "secondary",
+                  "label": "Ver postres"
+                }
+              ],
+              "blockType": "hero",
+              "heading": "S&H Ponie’s Desserts",
+              "tagline": "Postres hechos a mano",
+              "subheading": "¡Hola a todos! Ofrezco postres hechos a mano para eventos de cada tamaño."
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1598",
+              "blockName": null,
+              "items": [
+                {
+                  "id": "6ad91f810e54e85f11ea1595",
+                  "title": "Hechos a mano",
+                  "text": "Cada postre se prepara a mano y por pedido."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1596",
+                  "title": "Para eventos de cada tamaño",
+                  "text": "Desde una charola para la familia hasta una mesa de postres completa."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1597",
+                  "title": "A tu gusto",
+                  "text": "Cuéntame qué celebras y armamos juntos el menú."
+                }
+              ],
+              "blockType": "features",
+              "heading": "Dulces para celebrar"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1599",
+              "source": "images",
+              "blockName": null,
+              "images": [],
+              "blockType": "gallery",
+              "heading": "Recién hechos",
+              "intro": null,
+              "projects": []
+            },
+            {
+              "id": "6ad91f810e54e85f11ea159b",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea159a",
+                  "href": "/order",
+                  "label": "Haz tu pedido"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "¿Tienes un evento en puerta?",
+              "text": "Cuéntame la fecha, cuántos invitados esperas y qué postres se te antojan."
+            }
+          ],
+          "meta": {
+            "title": "S&H Ponie’s Desserts | Postres hechos a mano para eventos",
+            "description": "Postres hechos a mano para eventos de cada tamaño: mini cheesecakes, pastelitos de hojaldre con fruta, tartaletas, gelatinas y mesas de postres.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.017Z",
+          "createdAt": "2026-10-21T20:24:33.148Z",
+          "_status": "published"
+        },
+        {
+          "id": 7,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Postres",
+          "slug": "menu",
+          "navOrder": 20,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea159c",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Postres",
+              "tagline": null,
+              "subheading": "Todo se hace por pedido"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15a7",
+              "anchor": null,
+              "blockName": null,
+              "sections": [
+                {
+                  "id": "6ad91f810e54e85f11ea159e",
+                  "image": null,
+                  "items": [
+                    {
+                      "id": "6ad91f810e54e85f11ea159d",
+                      "image": null,
+                      "name": "Mini cheesecake de blackberry",
+                      "description": null,
+                      "price": null
+                    }
+                  ],
+                  "title": "Mini cheesecakes",
+                  "description": "Cheesecakes individuales, como los de blackberry (zarzamora)."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea159f",
+                  "image": null,
+                  "items": [],
+                  "title": "Pastelitos de hojaldre con fruta",
+                  "description": "Hojaldre con fresas y moras azules, espolvoreado con azúcar glas."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a0",
+                  "image": null,
+                  "items": [],
+                  "title": "Tartaletas de fruta",
+                  "description": "Tartaletas con crema pastelera y fruta fresca."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a1",
+                  "image": null,
+                  "items": [],
+                  "title": "Gelatinas",
+                  "description": "Vasitos de gelatina, perfectos para una mesa de postres."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a2",
+                  "image": null,
+                  "items": [],
+                  "title": "Galletas rellenas de mermelada",
+                  "description": "Galletas de mantequilla en forma de flor con mermelada."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a6",
+                  "image": null,
+                  "items": [
+                    {
+                      "id": "6ad91f810e54e85f11ea15a3",
+                      "image": null,
+                      "name": "Mini pasteles en capas",
+                      "description": null,
+                      "price": null
+                    },
+                    {
+                      "id": "6ad91f810e54e85f11ea15a4",
+                      "image": null,
+                      "name": "Cuadritos de fruta",
+                      "description": null,
+                      "price": null
+                    },
+                    {
+                      "id": "6ad91f810e54e85f11ea15a5",
+                      "image": null,
+                      "name": "Tartaletas, gelatinas y más",
+                      "description": null,
+                      "price": null
+                    }
+                  ],
+                  "title": "Mesas de postres para eventos",
+                  "description": "Una mesa surtida para tu evento, del tamaño que necesites."
+                }
+              ],
+              "blockType": "menu",
+              "heading": "Lo que preparo",
+              "intro": "Algunos de los postres que preparo para eventos. Pregunta por otros sabores.",
+              "note": "TODO: lista completa de postres, sabores y precios por confirmar."
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15a9",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea15a8",
+                  "href": "/order",
+                  "label": "Haz tu pedido"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "¿Tienes un evento en puerta?",
+              "text": "Cuéntame la fecha, cuántos invitados esperas y qué postres se te antojan."
+            }
+          ],
+          "meta": {
+            "title": "Postres | S&H Ponie’s Desserts",
+            "description": "Mini cheesecakes, pastelitos de hojaldre con fruta, tartaletas, gelatinas, galletas y mesas de postres para eventos.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.103Z",
+          "createdAt": "2026-10-21T20:24:33.217Z",
+          "_status": "published"
+        },
+        {
+          "id": 8,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Galería",
+          "slug": "gallery",
+          "navOrder": 30,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea15aa",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Galería",
+              "tagline": null,
+              "subheading": "Algunos pedidos recientes"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15ab",
+              "source": "images",
+              "blockName": null,
+              "images": [],
+              "blockType": "gallery",
+              "heading": "Mis postres",
+              "intro": null,
+              "projects": []
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15ad",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea15ac",
+                  "href": "https://www.facebook.com/profile.php?id=61588069222223",
+                  "label": "Ver en Facebook"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "Más fotos en Facebook",
+              "text": "Ahí publico los pedidos del día."
+            }
+          ],
+          "meta": {
+            "title": "Galería | S&H Ponie’s Desserts",
+            "description": "Fotos de postres y mesas de postres hechos a mano.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.183Z",
+          "createdAt": "2026-10-21T20:24:33.289Z",
+          "_status": "published"
+        },
+        {
+          "id": 9,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Pedidos",
+          "slug": "order",
+          "navOrder": 40,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea15ae",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Haz tu pedido",
+              "tagline": null,
+              "subheading": "Cuéntame sobre tu evento"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15af",
+              "anchor": null,
+              "blockName": null,
+              "blockType": "richText",
+              "heading": "Cómo funciona",
+              "content": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "ul",
+                      "type": "list",
+                      "start": 1,
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "type": "listitem",
+                          "value": 1,
+                          "format": "",
+                          "indent": 0,
+                          "version": 1,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "Llena el formulario con la fecha, el tipo de evento y los postres que te interesan.",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        },
+                        {
+                          "type": "listitem",
+                          "value": 2,
+                          "format": "",
+                          "indent": 0,
+                          "version": 1,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "Te contacto para confirmar sabores, cantidades y precio.",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        },
+                        {
+                          "type": "listitem",
+                          "value": 3,
+                          "format": "",
+                          "indent": 0,
+                          "version": 1,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "TODO: anticipación mínima, anticipo, formas de pago y si hay entrega o se recoge.",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        }
+                      ],
+                      "listType": "bullet",
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              }
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15b0",
+              "form": {
+                "id": 2,
+                "tenant": {
+                  "id": 2,
+                  "name": "S&H Ponie’s Desserts",
+                  "slug": "sh-ponies-desserts",
+                  "domain": "poniesdesserts.asandov.com",
+                  "languages": [
+                    "es",
+                    "en"
+                  ],
+                  "updatedAt": "2026-10-21T20:48:51.885Z",
+                  "createdAt": "2026-10-21T20:24:33.010Z"
+                },
+                "title": "Pedido - S&H Ponie’s Desserts",
+                "fields": [
+                  {
+                    "id": "6ad91f810e54e85f11ea1580",
+                    "name": "name",
+                    "width": 50,
+                    "required": true,
+                    "blockName": null,
+                    "blockType": "text",
+                    "label": "Nombre",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea1581",
+                    "name": "phone",
+                    "width": 50,
+                    "required": true,
+                    "blockName": null,
+                    "blockType": "text",
+                    "label": "Teléfono o WhatsApp",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea1582",
+                    "name": "email",
+                    "width": 50,
+                    "required": false,
+                    "blockName": null,
+                    "blockType": "email",
+                    "label": "Correo electrónico (opcional)"
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea1583",
+                    "name": "eventDate",
+                    "width": 50,
+                    "required": true,
+                    "defaultValue": null,
+                    "blockName": null,
+                    "blockType": "date",
+                    "label": "Fecha del evento"
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158c",
+                    "name": "eventType",
+                    "width": 50,
+                    "placeholder": null,
+                    "required": false,
+                    "blockName": null,
+                    "options": [
+                      {
+                        "id": "6ad91f810e54e85f11ea1584",
+                        "value": "birthday",
+                        "label": "Cumpleaños"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1585",
+                        "value": "wedding",
+                        "label": "Boda"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1586",
+                        "value": "quinceanera",
+                        "label": "XV años"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1587",
+                        "value": "baby-shower",
+                        "label": "Baby shower"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1588",
+                        "value": "religious",
+                        "label": "Bautizo o primera comunión"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1589",
+                        "value": "graduation",
+                        "label": "Graduación"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea158a",
+                        "value": "business",
+                        "label": "Evento de empresa"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea158b",
+                        "value": "other",
+                        "label": "Otro"
+                      }
+                    ],
+                    "blockType": "select",
+                    "label": "Tipo de evento",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158d",
+                    "name": "guests",
+                    "width": 50,
+                    "defaultValue": null,
+                    "required": false,
+                    "blockName": null,
+                    "blockType": "number",
+                    "label": "Número de invitados"
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158e",
+                    "name": "desserts",
+                    "width": 100,
+                    "required": true,
+                    "blockName": null,
+                    "blockType": "textarea",
+                    "label": "¿Qué postres te gustaría?",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158f",
+                    "name": "notes",
+                    "width": 100,
+                    "required": false,
+                    "blockName": null,
+                    "blockType": "textarea",
+                    "label": "Notas: sabores, alergias, entrega, presupuesto",
+                    "defaultValue": null
+                  }
+                ],
+                "submitButtonLabel": "Enviar pedido",
+                "confirmationType": "message",
+                "confirmationMessage": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "¡Gracias! Recibí tu pedido y te contactaré pronto para confirmar los detalles.",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textStyle": "",
+                        "textFormat": 0
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                },
+                "redirect": {
+                  "url": null
+                },
+                "updatedAt": "2026-10-21T20:48:51.929Z",
+                "createdAt": "2026-10-21T20:24:33.093Z",
+                "emails": []
+              },
+              "showContactInfo": true,
+              "blockName": null,
+              "blockType": "contactForm",
+              "heading": "Solicitud de pedido",
+              "intro": "Respondo lo antes posible."
+            }
+          ],
+          "meta": {
+            "title": "Pedidos | S&H Ponie’s Desserts",
+            "description": "Pide postres hechos a mano para tu evento: cumpleaños, bodas, XV años, baby showers y más.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.266Z",
+          "createdAt": "2026-10-21T20:24:33.355Z",
+          "_status": "published"
+        },
+        {
+          "id": 10,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Sobre mí",
+          "slug": "about",
+          "navOrder": 50,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea15b1",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Sobre mí",
+              "tagline": null,
+              "subheading": "La repostería detrás de cada pedido"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15b2",
+              "anchor": "historia",
+              "blockName": null,
+              "blockType": "richText",
+              "heading": "¡Hola!",
+              "content": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Ofrezco postres hechos a mano para eventos de cada tamaño.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textStyle": "",
+                      "textFormat": 0
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "TODO: unas líneas sobre ella: quién es, desde cuándo hornea, su especialidad y en qué ciudad trabaja.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textStyle": "",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              }
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15b4",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea15b3",
+                  "href": "/order",
+                  "label": "Haz tu pedido"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "¿Tienes un evento en puerta?",
+              "text": "Cuéntame la fecha, cuántos invitados esperas y qué postres se te antojan."
+            }
+          ],
+          "meta": {
+            "title": "Sobre mí | S&H Ponie’s Desserts",
+            "description": "Postres hechos a mano para eventos de cada tamaño.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.344Z",
+          "createdAt": "2026-10-21T20:24:33.420Z",
+          "_status": "published"
+        }
+      ],
+      "forms": [
+        {
+          "id": 2,
+          "tenant": 2,
+          "title": "Pedido - S&H Ponie’s Desserts",
+          "fields": [
+            {
+              "id": "6ad91f810e54e85f11ea1580",
+              "name": "name",
+              "width": 50,
+              "required": true,
+              "blockName": null,
+              "blockType": "text",
+              "label": "Nombre",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1581",
+              "name": "phone",
+              "width": 50,
+              "required": true,
+              "blockName": null,
+              "blockType": "text",
+              "label": "Teléfono o WhatsApp",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1582",
+              "name": "email",
+              "width": 50,
+              "required": false,
+              "blockName": null,
+              "blockType": "email",
+              "label": "Correo electrónico (opcional)"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1583",
+              "name": "eventDate",
+              "width": 50,
+              "required": true,
+              "defaultValue": null,
+              "blockName": null,
+              "blockType": "date",
+              "label": "Fecha del evento"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158c",
+              "name": "eventType",
+              "width": 50,
+              "placeholder": null,
+              "required": false,
+              "blockName": null,
+              "options": [
+                {
+                  "id": "6ad91f810e54e85f11ea1584",
+                  "value": "birthday",
+                  "label": "Cumpleaños"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1585",
+                  "value": "wedding",
+                  "label": "Boda"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1586",
+                  "value": "quinceanera",
+                  "label": "XV años"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1587",
+                  "value": "baby-shower",
+                  "label": "Baby shower"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1588",
+                  "value": "religious",
+                  "label": "Bautizo o primera comunión"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1589",
+                  "value": "graduation",
+                  "label": "Graduación"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea158a",
+                  "value": "business",
+                  "label": "Evento de empresa"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea158b",
+                  "value": "other",
+                  "label": "Otro"
+                }
+              ],
+              "blockType": "select",
+              "label": "Tipo de evento",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158d",
+              "name": "guests",
+              "width": 50,
+              "defaultValue": null,
+              "required": false,
+              "blockName": null,
+              "blockType": "number",
+              "label": "Número de invitados"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158e",
+              "name": "desserts",
+              "width": 100,
+              "required": true,
+              "blockName": null,
+              "blockType": "textarea",
+              "label": "¿Qué postres te gustaría?",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158f",
+              "name": "notes",
+              "width": 100,
+              "required": false,
+              "blockName": null,
+              "blockType": "textarea",
+              "label": "Notas: sabores, alergias, entrega, presupuesto",
+              "defaultValue": null
+            }
+          ],
+          "submitButtonLabel": "Enviar pedido",
+          "confirmationType": "message",
+          "confirmationMessage": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "¡Gracias! Recibí tu pedido y te contactaré pronto para confirmar los detalles.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textStyle": "",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "redirect": {
+            "url": null
+          },
+          "updatedAt": "2026-10-21T20:48:51.929Z",
+          "createdAt": "2026-10-21T20:24:33.093Z",
+          "emails": []
+        }
+      ]
+    },
+    "en": {
+      "settings": {
+        "id": 2,
+        "tenant": {
+          "id": 2,
+          "name": "S&H Ponie’s Desserts",
+          "slug": "sh-ponies-desserts",
+          "domain": "poniesdesserts.asandov.com",
+          "languages": [
+            "es",
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:48:51.885Z",
+          "createdAt": "2026-10-21T20:24:33.010Z"
+        },
+        "businessName": "S&H Ponie’s Desserts",
+        "shortName": "S&H Ponie’s Desserts",
+        "tagline": "Handmade desserts",
+        "description": "Handmade desserts for events of every size: mini cheesecakes, fruit puff pastries, tartlets, gelatin cups and dessert tables.",
+        "logo": null,
+        "logoOnDark": null,
+        "phone": null,
+        "email": null,
+        "whatsapp": null,
+        "address": {
+          "street": null,
+          "city": null,
+          "state": null,
+          "zip": null,
+          "showOnSite": false
+        },
+        "serviceArea": "TODO: city and delivery area",
+        "hours": [
+          {
+            "id": "6ad91f810e54e85f11ea1590",
+            "days": "TODO: days",
+            "hours": "TODO: order hours"
+          }
+        ],
+        "socialLinks": [
+          {
+            "id": "6ad91f810e54e85f11ea1591",
+            "platform": "facebook",
+            "url": "https://www.facebook.com/profile.php?id=61588069222223"
+          }
+        ],
+        "booking": {
+          "provider": "none",
+          "url": null,
+          "buttonLabel": "Book"
+        },
+        "footerBlurb": "Handmade desserts for events of every size.",
+        "footerServices": [],
+        "updatedAt": "2026-10-21T20:48:51.955Z",
+        "createdAt": "2026-10-21T20:24:33.125Z"
+      },
+      "pages": [
+        {
+          "id": 6,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Home",
+          "slug": "home",
+          "navOrder": 10,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea1594",
+              "showLogo": true,
+              "backgroundImage": null,
+              "size": "full",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea1592",
+                  "href": "/order",
+                  "style": "primary",
+                  "label": "Request an order"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1593",
+                  "href": "/menu",
+                  "style": "secondary",
+                  "label": "See the desserts"
+                }
+              ],
+              "blockType": "hero",
+              "heading": "S&H Ponie’s Desserts",
+              "tagline": "Handmade desserts",
+              "subheading": "Hi everyone! I make handmade desserts for events of every size."
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1598",
+              "blockName": null,
+              "items": [
+                {
+                  "id": "6ad91f810e54e85f11ea1595",
+                  "title": "Handmade",
+                  "text": "Every dessert is made by hand, to order."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1596",
+                  "title": "For events of every size",
+                  "text": "From a tray for the family to a full dessert table."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1597",
+                  "title": "Made your way",
+                  "text": "Tell me what you're celebrating and we'll plan the menu together."
+                }
+              ],
+              "blockType": "features",
+              "heading": "Sweets for every celebration"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1599",
+              "source": "images",
+              "blockName": null,
+              "images": [],
+              "blockType": "gallery",
+              "heading": "Fresh from the kitchen",
+              "intro": null,
+              "projects": []
+            },
+            {
+              "id": "6ad91f810e54e85f11ea159b",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea159a",
+                  "href": "/order",
+                  "label": "Request an order"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "Planning an event?",
+              "text": "Tell me the date, how many guests you expect and which desserts you have in mind."
+            }
+          ],
+          "meta": {
+            "title": "S&H Ponie’s Desserts | Handmade desserts for events",
+            "description": "Postres hechos a mano para eventos de cada tamaño: mini cheesecakes, pastelitos de hojaldre con fruta, tartaletas, gelatinas y mesas de postres.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.017Z",
+          "createdAt": "2026-10-21T20:24:33.148Z",
+          "_status": "published"
+        },
+        {
+          "id": 7,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Menu",
+          "slug": "menu",
+          "navOrder": 20,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea159c",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Desserts",
+              "tagline": null,
+              "subheading": "Everything is made to order"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15a7",
+              "anchor": null,
+              "blockName": null,
+              "sections": [
+                {
+                  "id": "6ad91f810e54e85f11ea159e",
+                  "image": null,
+                  "items": [
+                    {
+                      "id": "6ad91f810e54e85f11ea159d",
+                      "image": null,
+                      "name": "Blackberry mini cheesecake",
+                      "description": null,
+                      "price": null
+                    }
+                  ],
+                  "title": "Mini cheesecakes",
+                  "description": "Individual cheesecakes, like the blackberry ones."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea159f",
+                  "image": null,
+                  "items": [],
+                  "title": "Fruit puff pastries",
+                  "description": "Puff pastry with strawberries and blueberries, dusted with powdered sugar."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a0",
+                  "image": null,
+                  "items": [],
+                  "title": "Fruit tartlets",
+                  "description": "Tartlets with pastry cream and fresh fruit."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a1",
+                  "image": null,
+                  "items": [],
+                  "title": "Gelatin cups",
+                  "description": "Gelatin cups, perfect for a dessert table."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a2",
+                  "image": null,
+                  "items": [],
+                  "title": "Jam-filled cookies",
+                  "description": "Flower-shaped butter cookies with jam."
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea15a6",
+                  "image": null,
+                  "items": [
+                    {
+                      "id": "6ad91f810e54e85f11ea15a3",
+                      "image": null,
+                      "name": "Mini layer cakes",
+                      "description": null,
+                      "price": null
+                    },
+                    {
+                      "id": "6ad91f810e54e85f11ea15a4",
+                      "image": null,
+                      "name": "Fruit squares",
+                      "description": null,
+                      "price": null
+                    },
+                    {
+                      "id": "6ad91f810e54e85f11ea15a5",
+                      "image": null,
+                      "name": "Tartlets, gelatin cups and more",
+                      "description": null,
+                      "price": null
+                    }
+                  ],
+                  "title": "Event dessert tables",
+                  "description": "An assorted table for your event, whatever its size."
+                }
+              ],
+              "blockType": "menu",
+              "heading": "What I make",
+              "intro": "Some of the desserts I make for events. Ask about other flavors.",
+              "note": "TODO: full dessert list, flavors and prices to be confirmed."
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15a9",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea15a8",
+                  "href": "/order",
+                  "label": "Request an order"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "Planning an event?",
+              "text": "Tell me the date, how many guests you expect and which desserts you have in mind."
+            }
+          ],
+          "meta": {
+            "title": "Menu | S&H Ponie’s Desserts",
+            "description": "Mini cheesecakes, fruit puff pastries, tartlets, gelatin cups, cookies and dessert tables for events.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.103Z",
+          "createdAt": "2026-10-21T20:24:33.217Z",
+          "_status": "published"
+        },
+        {
+          "id": 8,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Gallery",
+          "slug": "gallery",
+          "navOrder": 30,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea15aa",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Gallery",
+              "tagline": null,
+              "subheading": "A few recent orders"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15ab",
+              "source": "images",
+              "blockName": null,
+              "images": [],
+              "blockType": "gallery",
+              "heading": "My desserts",
+              "intro": null,
+              "projects": []
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15ad",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea15ac",
+                  "href": "https://www.facebook.com/profile.php?id=61588069222223",
+                  "label": "See it on Facebook"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "More photos on Facebook",
+              "text": "I post each day’s orders there."
+            }
+          ],
+          "meta": {
+            "title": "Gallery | S&H Ponie’s Desserts",
+            "description": "Photos of handmade desserts and dessert tables.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.183Z",
+          "createdAt": "2026-10-21T20:24:33.289Z",
+          "_status": "published"
+        },
+        {
+          "id": 9,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "Order",
+          "slug": "order",
+          "navOrder": 40,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea15ae",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "Request an order",
+              "tagline": null,
+              "subheading": "Tell me about your event"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15af",
+              "anchor": null,
+              "blockName": null,
+              "blockType": "richText",
+              "heading": "How it works",
+              "content": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "ul",
+                      "type": "list",
+                      "start": 1,
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "type": "listitem",
+                          "value": 1,
+                          "format": "",
+                          "indent": 0,
+                          "version": 1,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "Fill in the form with the date, the type of event and the desserts you have in mind.",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        },
+                        {
+                          "type": "listitem",
+                          "value": 2,
+                          "format": "",
+                          "indent": 0,
+                          "version": 1,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "I get back to you to confirm flavors, quantities and price.",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        },
+                        {
+                          "type": "listitem",
+                          "value": 3,
+                          "format": "",
+                          "indent": 0,
+                          "version": 1,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "TODO: minimum notice, deposit, payment methods and whether it is delivery or pickup.",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        }
+                      ],
+                      "listType": "bullet",
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              }
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15b0",
+              "form": {
+                "id": 2,
+                "tenant": {
+                  "id": 2,
+                  "name": "S&H Ponie’s Desserts",
+                  "slug": "sh-ponies-desserts",
+                  "domain": "poniesdesserts.asandov.com",
+                  "languages": [
+                    "es",
+                    "en"
+                  ],
+                  "updatedAt": "2026-10-21T20:48:51.885Z",
+                  "createdAt": "2026-10-21T20:24:33.010Z"
+                },
+                "title": "Pedido - S&H Ponie’s Desserts",
+                "fields": [
+                  {
+                    "id": "6ad91f810e54e85f11ea1580",
+                    "name": "name",
+                    "width": 50,
+                    "required": true,
+                    "blockName": null,
+                    "blockType": "text",
+                    "label": "Name",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea1581",
+                    "name": "phone",
+                    "width": 50,
+                    "required": true,
+                    "blockName": null,
+                    "blockType": "text",
+                    "label": "Phone or WhatsApp",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea1582",
+                    "name": "email",
+                    "width": 50,
+                    "required": false,
+                    "blockName": null,
+                    "blockType": "email",
+                    "label": "Email (optional)"
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea1583",
+                    "name": "eventDate",
+                    "width": 50,
+                    "required": true,
+                    "defaultValue": null,
+                    "blockName": null,
+                    "blockType": "date",
+                    "label": "Event date"
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158c",
+                    "name": "eventType",
+                    "width": 50,
+                    "placeholder": null,
+                    "required": false,
+                    "blockName": null,
+                    "options": [
+                      {
+                        "id": "6ad91f810e54e85f11ea1584",
+                        "value": "birthday",
+                        "label": "Birthday"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1585",
+                        "value": "wedding",
+                        "label": "Wedding"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1586",
+                        "value": "quinceanera",
+                        "label": "Quinceañera"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1587",
+                        "value": "baby-shower",
+                        "label": "Baby shower"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1588",
+                        "value": "religious",
+                        "label": "Baptism or first communion"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea1589",
+                        "value": "graduation",
+                        "label": "Graduation"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea158a",
+                        "value": "business",
+                        "label": "Business event"
+                      },
+                      {
+                        "id": "6ad91f810e54e85f11ea158b",
+                        "value": "other",
+                        "label": "Other"
+                      }
+                    ],
+                    "blockType": "select",
+                    "label": "Type of event",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158d",
+                    "name": "guests",
+                    "width": 50,
+                    "defaultValue": null,
+                    "required": false,
+                    "blockName": null,
+                    "blockType": "number",
+                    "label": "Number of guests"
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158e",
+                    "name": "desserts",
+                    "width": 100,
+                    "required": true,
+                    "blockName": null,
+                    "blockType": "textarea",
+                    "label": "Which desserts would you like?",
+                    "defaultValue": null
+                  },
+                  {
+                    "id": "6ad91f810e54e85f11ea158f",
+                    "name": "notes",
+                    "width": 100,
+                    "required": false,
+                    "blockName": null,
+                    "blockType": "textarea",
+                    "label": "Notes: flavors, allergies, delivery, budget",
+                    "defaultValue": null
+                  }
+                ],
+                "submitButtonLabel": "Send request",
+                "confirmationType": "message",
+                "confirmationMessage": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "Thank you! I received your request and will contact you soon to confirm the details.",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textStyle": "",
+                        "textFormat": 0
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                },
+                "redirect": {
+                  "url": null
+                },
+                "updatedAt": "2026-10-21T20:48:51.929Z",
+                "createdAt": "2026-10-21T20:24:33.093Z",
+                "emails": []
+              },
+              "showContactInfo": true,
+              "blockName": null,
+              "blockType": "contactForm",
+              "heading": "Order request",
+              "intro": "I reply as soon as I can."
+            }
+          ],
+          "meta": {
+            "title": "Order | S&H Ponie’s Desserts",
+            "description": "Order handmade desserts for your event: birthdays, weddings, quinceañeras, baby showers and more.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.266Z",
+          "createdAt": "2026-10-21T20:24:33.355Z",
+          "_status": "published"
+        },
+        {
+          "id": 10,
+          "tenant": {
+            "id": 2,
+            "name": "S&H Ponie’s Desserts",
+            "slug": "sh-ponies-desserts",
+            "domain": "poniesdesserts.asandov.com",
+            "languages": [
+              "es",
+              "en"
+            ],
+            "updatedAt": "2026-10-21T20:48:51.885Z",
+            "createdAt": "2026-10-21T20:24:33.010Z"
+          },
+          "title": "About",
+          "slug": "about",
+          "navOrder": 50,
+          "layout": [
+            {
+              "id": "6ad91f810e54e85f11ea15b1",
+              "showLogo": false,
+              "backgroundImage": null,
+              "size": "compact",
+              "blockName": null,
+              "buttons": [],
+              "blockType": "hero",
+              "heading": "About me",
+              "tagline": null,
+              "subheading": "The baker behind every order"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15b2",
+              "anchor": "historia",
+              "blockName": null,
+              "blockType": "richText",
+              "heading": "Hi!",
+              "content": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "I make handmade desserts for events of every size.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textStyle": "",
+                      "textFormat": 0
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "TODO: a few lines about her: who she is, how long she has been baking, her specialty and which city she works in.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textStyle": "",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              }
+            },
+            {
+              "id": "6ad91f810e54e85f11ea15b4",
+              "tone": "brand",
+              "blockName": null,
+              "buttons": [
+                {
+                  "id": "6ad91f810e54e85f11ea15b3",
+                  "href": "/order",
+                  "label": "Request an order"
+                }
+              ],
+              "blockType": "cta",
+              "heading": "Planning an event?",
+              "text": "Tell me the date, how many guests you expect and which desserts you have in mind."
+            }
+          ],
+          "meta": {
+            "title": "About | S&H Ponie’s Desserts",
+            "description": "Postres hechos a mano para eventos de cada tamaño.",
+            "image": null
+          },
+          "updatedAt": "2026-10-21T20:48:52.344Z",
+          "createdAt": "2026-10-21T20:24:33.420Z",
+          "_status": "published"
+        }
+      ],
+      "forms": [
+        {
+          "id": 2,
+          "tenant": 2,
+          "title": "Pedido - S&H Ponie’s Desserts",
+          "fields": [
+            {
+              "id": "6ad91f810e54e85f11ea1580",
+              "name": "name",
+              "width": 50,
+              "required": true,
+              "blockName": null,
+              "blockType": "text",
+              "label": "Name",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1581",
+              "name": "phone",
+              "width": 50,
+              "required": true,
+              "blockName": null,
+              "blockType": "text",
+              "label": "Phone or WhatsApp",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1582",
+              "name": "email",
+              "width": 50,
+              "required": false,
+              "blockName": null,
+              "blockType": "email",
+              "label": "Email (optional)"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea1583",
+              "name": "eventDate",
+              "width": 50,
+              "required": true,
+              "defaultValue": null,
+              "blockName": null,
+              "blockType": "date",
+              "label": "Event date"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158c",
+              "name": "eventType",
+              "width": 50,
+              "placeholder": null,
+              "required": false,
+              "blockName": null,
+              "options": [
+                {
+                  "id": "6ad91f810e54e85f11ea1584",
+                  "value": "birthday",
+                  "label": "Birthday"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1585",
+                  "value": "wedding",
+                  "label": "Wedding"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1586",
+                  "value": "quinceanera",
+                  "label": "Quinceañera"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1587",
+                  "value": "baby-shower",
+                  "label": "Baby shower"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1588",
+                  "value": "religious",
+                  "label": "Baptism or first communion"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea1589",
+                  "value": "graduation",
+                  "label": "Graduation"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea158a",
+                  "value": "business",
+                  "label": "Business event"
+                },
+                {
+                  "id": "6ad91f810e54e85f11ea158b",
+                  "value": "other",
+                  "label": "Other"
+                }
+              ],
+              "blockType": "select",
+              "label": "Type of event",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158d",
+              "name": "guests",
+              "width": 50,
+              "defaultValue": null,
+              "required": false,
+              "blockName": null,
+              "blockType": "number",
+              "label": "Number of guests"
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158e",
+              "name": "desserts",
+              "width": 100,
+              "required": true,
+              "blockName": null,
+              "blockType": "textarea",
+              "label": "Which desserts would you like?",
+              "defaultValue": null
+            },
+            {
+              "id": "6ad91f810e54e85f11ea158f",
+              "name": "notes",
+              "width": 100,
+              "required": false,
+              "blockName": null,
+              "blockType": "textarea",
+              "label": "Notes: flavors, allergies, delivery, budget",
+              "defaultValue": null
+            }
+          ],
+          "submitButtonLabel": "Send request",
+          "confirmationType": "message",
+          "confirmationMessage": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Thank you! I received your request and will contact you soon to confirm the details.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textStyle": "",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "redirect": {
+            "url": null
+          },
+          "updatedAt": "2026-10-21T20:48:51.929Z",
+          "createdAt": "2026-10-21T20:24:33.093Z",
+          "emails": []
+        }
+      ]
+    }
+  }
+}

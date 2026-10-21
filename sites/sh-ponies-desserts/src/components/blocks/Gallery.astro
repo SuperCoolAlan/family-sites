@@ -1,0 +1,103 @@
+---
+import { t, type Lang } from '../../i18n'
+import { isObj, type Block, type Media } from '../../lib/cms'
+import { mediaURL, srcset } from '../../lib/media'
+
+type Props = { block: Extract<Block, { blockType: 'gallery' }>; lang: Lang; hideWhenEmpty?: boolean }
+const { block, lang, hideWhenEmpty = false } = Astro.props
+// This site has no portfolio projects, so only hand-picked photos render.
+const photos = (block.images ?? []).filter((i): i is typeof i & { image: Media } => isObj<Media>(i.image))
+const show = photos.length > 0 || !hideWhenEmpty
+---
+
+{
+  show && (
+    <section class="section tinted">
+      <div class="wrap">
+        {(block.heading || block.intro) && (
+          <div class="section-head">
+            {block.heading && <h2>{block.heading}</h2>}
+            {block.intro && <p>{block.intro}</p>}
+          </div>
+        )}
+        {photos.length > 0 ? (
+          <ul class="photos">
+            {photos.map((p) => (
+              <li>
+                <figure>
+                  <img
+                    src={mediaURL(p.image, 'card')}
+                    srcset={srcset(p.image)}
+                    sizes="(min-width: 1100px) 360px, (min-width: 640px) 50vw, 100vw"
+                    width={p.image.width ?? undefined}
+                    height={p.image.height ?? undefined}
+                    alt={p.image.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  {(p.caption || p.image.caption) && <figcaption>{p.caption || p.image.caption}</figcaption>}
+                </figure>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="soon card">{t(lang).photosSoon}</p>
+        )}
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 1;
+    column-gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .photos {
+      columns: 2;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .photos {
+      columns: 3;
+    }
+  }
+
+  li {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  figure {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+    color: var(--cocoa-soft);
+  }
+
+  .soon {
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--cocoa-soft);
+  }
+</style>

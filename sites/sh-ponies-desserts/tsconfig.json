@@ -1,0 +1,12 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "paths": {
+      "@cms-types": ["../../apps/cms/src/payload-types.ts"]
+    }
+  }
+}

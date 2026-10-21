@@ -1,0 +1,143 @@
+---
+import { isObj, type Block, type Media } from '../../lib/cms'
+import { mediaURL } from '../../lib/media'
+
+type Props = { block: Extract<Block, { blockType: 'menu' }> }
+const { block } = Astro.props
+---
+
+<section class="section" id={block.anchor || undefined}>
+  <div class="wrap">
+    {
+      (block.heading || block.intro) && (
+        <div class="section-head">
+          {block.heading && <h2>{block.heading}</h2>}
+          {block.intro && <p>{block.intro}</p>}
+        </div>
+      )
+    }
+    <div class="sections">
+      {
+        (block.sections ?? []).map((s) => (
+          <article class="card">
+            {isObj<Media>(s.image) && (
+              <img class="cover" src={mediaURL(s.image, 'card')} alt={s.image.alt} width="768" height="432" loading="lazy" decoding="async" />
+            )}
+            <div class="body">
+              <h3>{s.title}</h3>
+              {s.description && <p class="desc">{s.description}</p>}
+              {(s.items ?? []).length > 0 && (
+                <ul class="items">
+                  {(s.items ?? []).map((i) => (
+                    <li>
+                      <div class="row">
+                        <span class="item-name">{i.name}</span>
+                        {i.price && (
+                          <>
+                            <span class="dots" aria-hidden="true" />
+                            <span class="price">{i.price}</span>
+                          </>
+                        )}
+                      </div>
+                      {i.description && <p class="item-desc">{i.description}</p>}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    {block.note && <p class="note">{block.note}</p>}
+  </div>
+</section>
+
+<style>
+  .sections {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+  }
+
+  .card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cover {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .body {
+    padding: 1.5rem;
+    border-top: 4px solid var(--apricot);
+    flex: 1;
+  }
+
+  .card:nth-child(3n + 2) .body {
+    border-top-color: var(--blush);
+  }
+
+  .card:nth-child(3n) .body {
+    border-top-color: #e8c3cf;
+  }
+
+  h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  .desc {
+    color: var(--cocoa-soft);
+  }
+
+  .items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px dashed var(--line);
+  }
+
+  .items li {
+    padding-top: 0.6rem;
+  }
+
+  .row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .item-name {
+    font-weight: 700;
+  }
+
+  .dots {
+    flex: 1;
+    border-bottom: 2px dotted var(--line);
+    transform: translateY(-0.3em);
+  }
+
+  .price {
+    font-weight: 700;
+    color: var(--berry-dark);
+    white-space: nowrap;
+  }
+
+  .item-desc {
+    margin: 0.15rem 0 0;
+    font-size: 0.95rem;
+    color: var(--cocoa-soft);
+  }
+
+  .note {
+    margin: 2rem auto 0;
+    max-width: 40rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--cocoa-soft);
+  }
+</style>
