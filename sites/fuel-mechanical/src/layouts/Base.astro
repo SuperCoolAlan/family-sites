@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import ConstructionBanner from '../components/ConstructionBanner.astro'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 import { getContent } from '../lib/cms'
@@ -48,6 +49,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
   </head>
   <body>
     <div class="app-container">
+      <ConstructionBanner />
       <Nav />
       <main>
         <slot />

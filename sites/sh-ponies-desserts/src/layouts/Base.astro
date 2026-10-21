@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import Footer from '../components/Footer.astro'
+import ConstructionBanner from '../components/ConstructionBanner.astro'
 import Header from '../components/Header.astro'
 import { DEFAULT_LANG, LOCALES, pagePath, t, type Lang } from '../i18n'
 import { getLocale, type Media } from '../lib/cms'
@@ -53,6 +54,7 @@ const alternates = slug ? LOCALES.map((l) => ({ lang: l, href: new URL(pagePath(
   </head>
   <body>
     <a class="skip" href="#main">{t(lang).skip}</a>
+    <ConstructionBanner />
     <Header lang={lang} slug={slug} />
     <main id="main">
       <slot />

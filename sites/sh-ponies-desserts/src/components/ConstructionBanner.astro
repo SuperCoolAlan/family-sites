@@ -1,0 +1,25 @@
+---
+// Shown until PUBLIC_CONSTRUCTION_BANNER=off is set in the Pages project; Spanish on every locale by request.
+const show = import.meta.env.PUBLIC_CONSTRUCTION_BANNER !== 'off'
+---
+
+{
+  show && (
+    <div class="construction" role="status" lang="es">
+      <span aria-hidden="true">🚧</span> Sitio en construcción. Algunos detalles todavía se están completando; escríbeme para confirmar tu pedido.
+    </div>
+  )
+}
+
+<style>
+  .construction {
+    background: var(--apricot);
+    color: var(--cocoa-deep);
+    border-bottom: 1px solid var(--line);
+    font-weight: 700;
+    text-align: center;
+    padding: 0.55rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+</style>
