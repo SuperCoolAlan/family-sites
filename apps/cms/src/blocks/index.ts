@@ -228,6 +228,45 @@ export const FeatureList: Block = {
   ],
 }
 
+export const Menu: Block = {
+  slug: 'menu',
+  interfaceName: 'MenuBlock',
+  labels: { singular: 'Menu / price list', plural: 'Menus / price lists' },
+  fields: [
+    { name: 'heading', type: 'text', localized: true },
+    { name: 'intro', type: 'textarea', localized: true },
+    {
+      name: 'sections',
+      type: 'array',
+      minRows: 1,
+      labels: { singular: 'Section', plural: 'Sections' },
+      fields: [
+        { name: 'title', type: 'text', required: true, localized: true },
+        { name: 'description', type: 'textarea', localized: true },
+        { name: 'image', type: 'upload', relationTo: 'media' },
+        {
+          name: 'items',
+          type: 'array',
+          labels: { singular: 'Item', plural: 'Items' },
+          fields: [
+            { name: 'name', type: 'text', required: true, localized: true },
+            { name: 'description', type: 'textarea', localized: true },
+            {
+              name: 'price',
+              type: 'text',
+              localized: true,
+              admin: { description: 'Free text, e.g. "$3 each", "from $40", "por docena". Leave empty to hide.' },
+            },
+            { name: 'image', type: 'upload', relationTo: 'media' },
+          ],
+        },
+      ],
+    },
+    { name: 'note', type: 'textarea', localized: true, admin: { description: 'Small print under the list, e.g. ordering lead time.' } },
+    { name: 'anchor', type: 'text' },
+  ],
+}
+
 export const pageBlocks: Block[] = [
   Hero,
   RichText,
@@ -239,4 +278,5 @@ export const pageBlocks: Block[] = [
   ContactForm,
   BookingEmbed,
   FAQ,
+  Menu,
 ]

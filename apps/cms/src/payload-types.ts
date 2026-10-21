@@ -159,6 +159,7 @@ export interface Page {
         | ContactFormBlock
         | BookingEmbedBlock
         | FAQBlock
+        | MenuBlock
       )[]
     | null;
   /**
@@ -704,6 +705,42 @@ export interface FAQBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MenuBlock".
+ */
+export interface MenuBlock {
+  heading?: string | null;
+  intro?: string | null;
+  sections?:
+    | {
+        title: string;
+        description?: string | null;
+        image?: (number | null) | Media;
+        items?:
+          | {
+              name: string;
+              description?: string | null;
+              /**
+               * Free text, e.g. "$3 each", "from $40", "por docena". Leave empty to hide.
+               */
+              price?: string | null;
+              image?: (number | null) | Media;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Small print under the list, e.g. ordering lead time.
+   */
+  note?: string | null;
+  anchor?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'menu';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings".
  */
 export interface SiteSetting {
@@ -955,6 +992,7 @@ export interface PagesSelect<T extends boolean = true> {
         contactForm?: T | ContactFormBlockSelect<T>;
         bookingEmbed?: T | BookingEmbedBlockSelect<T>;
         faq?: T | FAQBlockSelect<T>;
+        menu?: T | MenuBlockSelect<T>;
       };
   meta?:
     | T
@@ -1121,6 +1159,35 @@ export interface FAQBlockSelect<T extends boolean = true> {
         answer?: T;
         id?: T;
       };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MenuBlock_select".
+ */
+export interface MenuBlockSelect<T extends boolean = true> {
+  heading?: T;
+  intro?: T;
+  sections?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        items?:
+          | T
+          | {
+              name?: T;
+              description?: T;
+              price?: T;
+              image?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  note?: T;
+  anchor?: T;
   id?: T;
   blockName?: T;
 }
