@@ -53,7 +53,8 @@ const orderForm = bilingual({
       blockType: 'select',
       name: 'eventType',
       label: tr('Tipo de evento', 'Type of event'),
-      placeholder: tr('Elige una opción', 'Choose one'),
+      // The plugin doesn't localize placeholders, so leave it empty and let the site supply one per language.
+      placeholder: null,
       required: false,
       width: 50,
       options: [
