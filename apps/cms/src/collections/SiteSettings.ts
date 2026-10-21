@@ -32,6 +32,14 @@ export const SiteSettings: CollectionConfig = {
             { name: 'phone', type: 'text' },
             { name: 'email', type: 'email' },
             {
+              name: 'whatsapp',
+              label: 'WhatsApp number',
+              type: 'text',
+              admin: { description: 'With country code, e.g. +1 918 555 0100. Sites show a WhatsApp chat button.' },
+              validate: (v: string | null | undefined) =>
+                !v || /^\+?[\d\s().-]{7,20}$/.test(v) || 'Use digits with the country code, e.g. +1 918 555 0100.',
+            },
+            {
               name: 'address',
               type: 'group',
               fields: [

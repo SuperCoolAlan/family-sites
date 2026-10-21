@@ -773,6 +773,10 @@ export interface SiteSetting {
   logoOnDark?: (number | null) | Media;
   phone?: string | null;
   email?: string | null;
+  /**
+   * With country code, e.g. +1 918 555 0100. Sites show a WhatsApp chat button.
+   */
+  whatsapp?: string | null;
   address?: {
     street?: string | null;
     city?: string | null;
@@ -1314,6 +1318,7 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   logoOnDark?: T;
   phone?: T;
   email?: T;
+  whatsapp?: T;
   address?:
     | T
     | {
