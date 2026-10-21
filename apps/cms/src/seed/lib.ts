@@ -140,3 +140,23 @@ export const seedTenant = async (payload: Payload, seed: TenantSeed, assets: str
   payload.logger.info(`seed: ${seed.tenant.slug} ready (tenant id ${t})`)
   return t
 }
+
+const TR = Symbol('tr')
+type Tr<V> = { [TR]: true; es: V; en: V }
+
+/** Marks one value as Spanish/English; `bilingual` splits a tree of these into per-locale data. */
+export const tr = <V>(es: V, en: V): V => ({ [TR]: true, es, en }) as unknown as V
+
+const resolve = (v: unknown, locale: Locale): unknown => {
+  if (Array.isArray(v)) return v.map((x) => resolve(x, locale))
+  if (isRow(v)) {
+    if (TR in v) return (v as unknown as Tr<unknown>)[locale]
+    return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, resolve(x, locale)]))
+  }
+  return v
+}
+
+export const bilingual = <T extends Data>(tree: T): ByLocale<T> => ({
+  es: resolve(tree, 'es') as T,
+  en: resolve(tree, 'en') as T,
+})

@@ -14,3 +14,6 @@ apps/cms/next-env.d.ts
 # astro
 sites/*/dist/
 sites/*/.astro/
+
+# family photos stay out of this public repo; upload them with import-media instead
+apps/cms/src/seed/assets/local/

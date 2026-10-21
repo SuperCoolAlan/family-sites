@@ -6,6 +6,7 @@ import { getPayload, type Payload } from 'payload'
 
 import { fuelMechanical } from './fuel-mechanical'
 import { seedTenant } from './lib'
+import { shPoniesDesserts } from './sh-ponies-desserts'
 
 const assets = path.join(path.dirname(fileURLToPath(import.meta.url)), 'assets')
 
@@ -19,5 +20,5 @@ const seedAdmin = async (payload: Payload) => {
 
 const payload = await getPayload({ config })
 await seedAdmin(payload)
-for (const seed of [fuelMechanical]) await seedTenant(payload, seed, assets)
+for (const seed of [fuelMechanical, shPoniesDesserts]) await seedTenant(payload, seed, assets)
 process.exit(0)
