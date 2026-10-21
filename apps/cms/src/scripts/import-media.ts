@@ -56,7 +56,7 @@ for (const file of files) {
   for (const locale of locales) {
     const alt = altText[file]?.[locale] || placeholder[locale](file)
     if (id) {
-      await payload.update({ collection: 'media', id, data: { alt }, locale, depth: 0, context })
+      await payload.update({ collection: 'media', id, data: { alt }, locale, depth: 0, context: context() })
     } else {
       const doc = await payload.create({
         collection: 'media',
@@ -64,7 +64,7 @@ for (const file of files) {
         filePath: path.join(folder, file),
         locale,
         depth: 0,
-        context,
+        context: context(),
       })
       id = doc.id
     }
@@ -97,7 +97,7 @@ if (gallerySlug && imported.length) {
       draft: true,
       locale: locales[0],
       depth: 0,
-      context,
+      context: context(),
     })
     payload.logger.info(`import-media: added ${imported.length} photos to a draft of /${gallerySlug}; review alt text, then Publish`)
   }

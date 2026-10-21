@@ -7,8 +7,8 @@ export type Locale = 'es' | 'en'
 export type ByLocale<T> = Partial<Record<Locale, T>>
 type Data = Record<string, unknown>
 
-// Seeding must not fire Pages deploy hooks; run it, then publish one thing to trigger a build.
-export const context = { skipDeploy: true }
+// Seeding must not fire Pages deploy hooks. A fresh object per call: the storage plugin stashes the upload in context.
+export const context = () => ({ skipDeploy: true })
 
 const isRow = (v: unknown): v is Data => typeof v === 'object' && v !== null && !Array.isArray(v)
 
@@ -47,8 +47,8 @@ export const upsertLocalized = async (
     const body = { ...(withIds(data, doc) as Data), ...extra }
     doc = (
       doc
-        ? await payload.update({ collection, id: doc.id, data: body as never, locale, depth: 0, context })
-        : await payload.create({ collection, data: body as never, locale, depth: 0, context })
+        ? await payload.update({ collection, id: doc.id, data: body as never, locale, depth: 0, context: context() })
+        : await payload.create({ collection, data: body as never, locale, depth: 0, context: context() })
     ) as unknown as Data & { id: number }
   }
   if (!doc) throw new Error(`seed: no locale data for ${collection}`)
@@ -74,10 +74,10 @@ export const upsertMedia = async (
   for (const locale of locales) {
     const data = { alt: alt[locale]!, tenant }
     if (id) {
-      await payload.update({ collection: 'media', id, data, locale, depth: 0, context })
+      await payload.update({ collection: 'media', id, data, locale, depth: 0, context: context() })
     } else {
       if (!fs.existsSync(filePath)) throw new Error(`seed: missing asset ${filePath}`)
-      id = (await payload.create({ collection: 'media', data, filePath, locale, depth: 0, context })).id
+      id = (await payload.create({ collection: 'media', data, filePath, locale, depth: 0, context: context() })).id
     }
   }
   if (!id) throw new Error(`seed: no alt text given for ${filename}`)
@@ -87,8 +87,8 @@ export const upsertMedia = async (
 export const upsertTenant = async (payload: Payload, data: { name: string; slug: string; domain: string; languages: Locale[] }) => {
   const existing = await payload.find({ collection: 'tenants', where: { slug: { equals: data.slug } }, limit: 1, depth: 0 })
   const tenant = existing.docs[0]
-    ? await payload.update({ collection: 'tenants', id: existing.docs[0].id, data, context })
-    : await payload.create({ collection: 'tenants', data, context })
+    ? await payload.update({ collection: 'tenants', id: existing.docs[0].id, data, context: context() })
+    : await payload.create({ collection: 'tenants', data, context: context() })
   return tenant.id
 }
 
