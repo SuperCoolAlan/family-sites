@@ -13,6 +13,7 @@
     "migrate": "cross-env NODE_OPTIONS=--no-deprecation payload migrate",
     "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create",
     "seed": "cross-env NODE_OPTIONS=--no-deprecation payload run src/seed/index.ts",
+    "import-media": "cross-env NODE_OPTIONS=--no-deprecation payload run src/scripts/import-media.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
