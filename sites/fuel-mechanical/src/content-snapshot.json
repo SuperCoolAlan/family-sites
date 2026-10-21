@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-21T20:59:03.968Z",
+  "fetchedAt": "2026-10-21T21:48:29.639Z",
   "tenant": {
     "id": 1,
     "name": "Fuel Mechanical LLC",
@@ -424,7 +424,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Fuel Mechanical LLC has been serving the community with reliable heating and cooling solutions. We pride ourselves on delivering precision workmanship and exceptional quality in every project for both residential and commercial clients.",
+                      "text": "Fuel Mechanical LLC has been serving the community with reliable heating and cooling solutions since 2024. We pride ourselves on delivering precision workmanship and exceptional quality in every project for both residential and commercial clients.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -504,7 +504,7 @@
         "description": "Learn about Fuel Mechanical LLC, your trusted heating and cooling professionals with years of experience serving the community.",
         "image": null
       },
-      "updatedAt": "2026-10-21T20:18:58.395Z",
+      "updatedAt": "2026-10-21T21:36:05.836Z",
       "createdAt": "2026-10-21T20:18:58.394Z",
       "_status": "published"
     },
@@ -1098,7 +1098,7 @@
   ],
   "projects": [
     {
-      "id": 3,
+      "id": 9,
       "tenant": {
         "id": 1,
         "name": "Fuel Mechanical LLC",
@@ -1110,22 +1110,309 @@
         "updatedAt": "2026-10-21T20:36:03.824Z",
         "createdAt": "2026-10-21T20:18:24.151Z"
       },
-      "title": "Air Conditioning Tune-Up",
-      "slug": "air-conditioning-tune-up",
-      "category": "AC Maintenance",
-      "summary": "Comprehensive maintenance service ensuring peak efficiency and extending system lifespan.",
+      "title": "Coil Cleaning & Maintenance",
+      "slug": "coil-cleaning-and-maintenance",
+      "category": "Maintenance",
+      "summary": "Condenser coil cleaning and control repairs that keep residential and commercial systems running efficiently.",
       "location": null,
       "completedOn": null,
       "service": null,
-      "coverImage": null,
-      "gallery": [],
+      "coverImage": {
+        "id": 11,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "languages": [
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:36:03.824Z",
+          "createdAt": "2026-10-21T20:18:24.151Z"
+        },
+        "alt": "Technician cleaning a large commercial condenser coil",
+        "caption": null,
+        "prefix": "",
+        "_objectKey": null,
+        "updatedAt": "2026-10-21T21:44:45.830Z",
+        "createdAt": "2026-10-21T21:44:44.650Z",
+        "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial.jpg",
+        "thumbnailURL": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial-400x300.webp",
+        "filename": "fuel-mechanical-coil-cleaning-commercial.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 472130,
+        "width": 1536,
+        "height": 2048,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial-400x300.webp",
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 17532,
+            "filename": "fuel-mechanical-coil-cleaning-commercial-400x300.webp"
+          },
+          "card": {
+            "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial-768x1024.webp",
+            "width": 768,
+            "height": 1024,
+            "mimeType": "image/webp",
+            "filesize": 108336,
+            "filename": "fuel-mechanical-coil-cleaning-commercial-768x1024.webp"
+          },
+          "hero": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          }
+        }
+      },
+      "gallery": [
+        {
+          "id": "6ad932ca059c186b5da54847",
+          "image": {
+            "id": 11,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician cleaning a large commercial condenser coil",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:45.830Z",
+            "createdAt": "2026-10-21T21:44:44.650Z",
+            "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial-400x300.webp",
+            "filename": "fuel-mechanical-coil-cleaning-commercial.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 472130,
+            "width": 1536,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 17532,
+                "filename": "fuel-mechanical-coil-cleaning-commercial-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-commercial-768x1024.webp",
+                "width": 768,
+                "height": 1024,
+                "mimeType": "image/webp",
+                "filesize": 108336,
+                "filename": "fuel-mechanical-coil-cleaning-commercial-768x1024.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932ca059c186b5da54848",
+          "image": {
+            "id": 12,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician washing a residential condenser coil during maintenance",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:48.404Z",
+            "createdAt": "2026-10-21T21:44:47.072Z",
+            "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-01.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-01-400x300.webp",
+            "filename": "fuel-mechanical-coil-cleaning-residential-01.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 635554,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-01-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 22004,
+                "filename": "fuel-mechanical-coil-cleaning-residential-01-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-01-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 80840,
+                "filename": "fuel-mechanical-coil-cleaning-residential-01-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-01-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 426868,
+                "filename": "fuel-mechanical-coil-cleaning-residential-01-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932ca059c186b5da54849",
+          "image": {
+            "id": 13,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician rinsing a condenser coil with the fan top removed",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:51.190Z",
+            "createdAt": "2026-10-21T21:44:49.643Z",
+            "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-02.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-02-400x300.webp",
+            "filename": "fuel-mechanical-coil-cleaning-residential-02.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 728764,
+            "width": 1536,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-02-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 30048,
+                "filename": "fuel-mechanical-coil-cleaning-residential-02-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-cleaning-residential-02-768x1024.webp",
+                "width": 768,
+                "height": 1024,
+                "mimeType": "image/webp",
+                "filesize": 179824,
+                "filename": "fuel-mechanical-coil-cleaning-residential-02-768x1024.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932ca059c186b5da5484a",
+          "image": {
+            "id": 15,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Rewired HVAC control panel with new contactors and labeled wiring, after the repair",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:56.048Z",
+            "createdAt": "2026-10-21T21:44:54.816Z",
+            "url": "https://media.asandov.com/fuel-mechanical-controls-panel-after.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-controls-panel-after-400x300.webp",
+            "filename": "fuel-mechanical-controls-panel-after.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 286264,
+            "width": 1170,
+            "height": 1557,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-controls-panel-after-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 23236,
+                "filename": "fuel-mechanical-controls-panel-after-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-controls-panel-after-768x1022.webp",
+                "width": 768,
+                "height": 1022,
+                "mimeType": "image/webp",
+                "filesize": 112200,
+                "filename": "fuel-mechanical-controls-panel-after-768x1022.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        }
+      ],
       "description": null,
-      "updatedAt": "2026-10-21T20:18:46.465Z",
-      "createdAt": "2026-10-21T20:18:46.465Z",
+      "updatedAt": "2026-10-21T21:46:51.087Z",
+      "createdAt": "2026-10-21T21:46:51.087Z",
       "_status": "published"
     },
     {
-      "id": 2,
+      "id": 8,
       "tenant": {
         "id": 1,
         "name": "Fuel Mechanical LLC",
@@ -1137,22 +1424,309 @@
         "updatedAt": "2026-10-21T20:36:03.824Z",
         "createdAt": "2026-10-21T20:18:24.151Z"
       },
-      "title": "Commercial Heating Service",
-      "slug": "commercial-heating-service",
-      "category": "Heating Repair",
-      "summary": "Emergency repair and maintenance on commercial heating system, restoring optimal performance.",
+      "title": "Refrigeration & Mechanical Piping",
+      "slug": "refrigeration-and-mechanical-piping",
+      "category": "Refrigeration",
+      "summary": "Commercial refrigeration condensing units and brazed copper piping, plus hydronic piping in mechanical rooms.",
       "location": null,
       "completedOn": null,
       "service": null,
-      "coverImage": null,
-      "gallery": [],
+      "coverImage": {
+        "id": 26,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "languages": [
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:36:03.824Z",
+          "createdAt": "2026-10-21T20:18:24.151Z"
+        },
+        "alt": "Pair of commercial refrigeration condensing units on a concrete pad",
+        "caption": null,
+        "prefix": "",
+        "_objectKey": null,
+        "updatedAt": "2026-10-21T21:45:24.087Z",
+        "createdAt": "2026-10-21T21:45:22.931Z",
+        "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers.jpg",
+        "thumbnailURL": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-400x300.webp",
+        "filename": "fuel-mechanical-refrigeration-condensers.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 391923,
+        "width": 2048,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-400x300.webp",
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 21616,
+            "filename": "fuel-mechanical-refrigeration-condensers-400x300.webp"
+          },
+          "card": {
+            "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-768x576.webp",
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 77230,
+            "filename": "fuel-mechanical-refrigeration-condensers-768x576.webp"
+          },
+          "hero": {
+            "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-1920x1440.webp",
+            "width": 1920,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 350962,
+            "filename": "fuel-mechanical-refrigeration-condensers-1920x1440.webp"
+          }
+        }
+      },
+      "gallery": [
+        {
+          "id": "6ad932c8059c186b5da54843",
+          "image": {
+            "id": 26,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Pair of commercial refrigeration condensing units on a concrete pad",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:24.087Z",
+            "createdAt": "2026-10-21T21:45:22.931Z",
+            "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-400x300.webp",
+            "filename": "fuel-mechanical-refrigeration-condensers.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 391923,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 21616,
+                "filename": "fuel-mechanical-refrigeration-condensers-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 77230,
+                "filename": "fuel-mechanical-refrigeration-condensers-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-condensers-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 350962,
+                "filename": "fuel-mechanical-refrigeration-condensers-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c8059c186b5da54844",
+          "image": {
+            "id": 27,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Refrigeration condenser with brazed copper piping and receiver",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:26.412Z",
+            "createdAt": "2026-10-21T21:45:25.302Z",
+            "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-01.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-01-400x300.webp",
+            "filename": "fuel-mechanical-refrigeration-piping-01.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 390764,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-01-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 24254,
+                "filename": "fuel-mechanical-refrigeration-piping-01-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-01-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 84538,
+                "filename": "fuel-mechanical-refrigeration-piping-01-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-01-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 372920,
+                "filename": "fuel-mechanical-refrigeration-piping-01-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c8059c186b5da54845",
+          "image": {
+            "id": 28,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Copper refrigeration piping and receiver tank at a commercial condenser",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:29.221Z",
+            "createdAt": "2026-10-21T21:45:27.744Z",
+            "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-02.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-02-400x300.webp",
+            "filename": "fuel-mechanical-refrigeration-piping-02.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 342743,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-02-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 19194,
+                "filename": "fuel-mechanical-refrigeration-piping-02-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-02-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 68248,
+                "filename": "fuel-mechanical-refrigeration-piping-02-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-refrigeration-piping-02-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 318032,
+                "filename": "fuel-mechanical-refrigeration-piping-02-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c8059c186b5da54846",
+          "image": {
+            "id": 9,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Mechanical room with copper hydronic piping and pump controls",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:40.923Z",
+            "createdAt": "2026-10-21T21:44:39.694Z",
+            "url": "https://media.asandov.com/fuel-mechanical-boiler-piping.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-boiler-piping-400x300.webp",
+            "filename": "fuel-mechanical-boiler-piping.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 423240,
+            "width": 1440,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-boiler-piping-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 29680,
+                "filename": "fuel-mechanical-boiler-piping-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-boiler-piping-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 98276,
+                "filename": "fuel-mechanical-boiler-piping-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        }
+      ],
       "description": null,
-      "updatedAt": "2026-10-21T20:18:45.054Z",
-      "createdAt": "2026-10-21T20:18:45.054Z",
+      "updatedAt": "2026-10-21T21:46:48.951Z",
+      "createdAt": "2026-10-21T21:46:48.951Z",
       "_status": "published"
     },
     {
-      "id": 1,
+      "id": 7,
       "tenant": {
         "id": 1,
         "name": "Fuel Mechanical LLC",
@@ -1164,18 +1738,1827 @@
         "updatedAt": "2026-10-21T20:36:03.824Z",
         "createdAt": "2026-10-21T20:18:24.151Z"
       },
-      "title": "Residential HVAC System",
-      "slug": "residential-hvac-system",
+      "title": "Split Systems & Ductless",
+      "slug": "split-systems-and-ductless",
       "category": "HVAC Installation",
-      "summary": "Complete system installation with precision ductwork and energy-efficient components.",
+      "summary": "Split-system condensers and ductless mini-splits installed with clean line-set runs on commercial buildings.",
       "location": null,
       "completedOn": null,
       "service": null,
-      "coverImage": null,
-      "gallery": [],
+      "coverImage": {
+        "id": 37,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "languages": [
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:36:03.824Z",
+          "createdAt": "2026-10-21T20:18:24.151Z"
+        },
+        "alt": "Three new split-system condensers installed side by side outside a commercial building",
+        "caption": null,
+        "prefix": "",
+        "_objectKey": null,
+        "updatedAt": "2026-10-21T21:45:51.385Z",
+        "createdAt": "2026-10-21T21:45:50.196Z",
+        "url": "https://media.asandov.com/fuel-mechanical-split-system-condensers.jpg",
+        "thumbnailURL": "https://media.asandov.com/fuel-mechanical-split-system-condensers-400x300.webp",
+        "filename": "fuel-mechanical-split-system-condensers.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 166587,
+        "width": 1320,
+        "height": 990,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "https://media.asandov.com/fuel-mechanical-split-system-condensers-400x300.webp",
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 13818,
+            "filename": "fuel-mechanical-split-system-condensers-400x300.webp"
+          },
+          "card": {
+            "url": "https://media.asandov.com/fuel-mechanical-split-system-condensers-768x576.webp",
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 39712,
+            "filename": "fuel-mechanical-split-system-condensers-768x576.webp"
+          },
+          "hero": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          }
+        }
+      },
+      "gallery": [
+        {
+          "id": "6ad932c6059c186b5da54840",
+          "image": {
+            "id": 37,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Three new split-system condensers installed side by side outside a commercial building",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:51.385Z",
+            "createdAt": "2026-10-21T21:45:50.196Z",
+            "url": "https://media.asandov.com/fuel-mechanical-split-system-condensers.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-split-system-condensers-400x300.webp",
+            "filename": "fuel-mechanical-split-system-condensers.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 166587,
+            "width": 1320,
+            "height": 990,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-split-system-condensers-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 13818,
+                "filename": "fuel-mechanical-split-system-condensers-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-split-system-condensers-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 39712,
+                "filename": "fuel-mechanical-split-system-condensers-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c6059c186b5da54841",
+          "image": {
+            "id": 17,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Ductless mini-split outdoor unit mounted on a metal building wall with line-set cover",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:02.921Z",
+            "createdAt": "2026-10-21T21:44:59.996Z",
+            "url": "https://media.asandov.com/fuel-mechanical-ductless-mini-split.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ductless-mini-split-400x300.webp",
+            "filename": "fuel-mechanical-ductless-mini-split.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 282352,
+            "width": 1536,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductless-mini-split-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 9582,
+                "filename": "fuel-mechanical-ductless-mini-split-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductless-mini-split-768x1024.webp",
+                "width": 768,
+                "height": 1024,
+                "mimeType": "image/webp",
+                "filesize": 48758,
+                "filename": "fuel-mechanical-ductless-mini-split-768x1024.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c6059c186b5da54842",
+          "image": {
+            "id": 36,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Scissor lift staged at a commercial building for exterior HVAC line-set work",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:49.000Z",
+            "createdAt": "2026-10-21T21:45:47.226Z",
+            "url": "https://media.asandov.com/fuel-mechanical-scissor-lift-exterior.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-scissor-lift-exterior-400x300.webp",
+            "filename": "fuel-mechanical-scissor-lift-exterior.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 586051,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-scissor-lift-exterior-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 26226,
+                "filename": "fuel-mechanical-scissor-lift-exterior-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-scissor-lift-exterior-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 82398,
+                "filename": "fuel-mechanical-scissor-lift-exterior-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-scissor-lift-exterior-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 372848,
+                "filename": "fuel-mechanical-scissor-lift-exterior-1920x1440.webp"
+              }
+            }
+          }
+        }
+      ],
       "description": null,
-      "updatedAt": "2026-10-21T20:18:43.775Z",
-      "createdAt": "2026-10-21T20:18:43.775Z",
+      "updatedAt": "2026-10-21T21:46:46.816Z",
+      "createdAt": "2026-10-21T21:46:46.816Z",
+      "_status": "published"
+    },
+    {
+      "id": 6,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "languages": [
+          "en"
+        ],
+        "updatedAt": "2026-10-21T20:36:03.824Z",
+        "createdAt": "2026-10-21T20:18:24.151Z"
+      },
+      "title": "Air Handler Installations",
+      "slug": "air-handler-installations",
+      "category": "HVAC Installation",
+      "summary": "Air handlers installed in commercial spaces, mechanical rooms and attics with custom sheet-metal plenums and condensate piping.",
+      "location": null,
+      "completedOn": null,
+      "service": null,
+      "coverImage": {
+        "id": 6,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "languages": [
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:36:03.824Z",
+          "createdAt": "2026-10-21T20:18:24.151Z"
+        },
+        "alt": "Multiple air handlers and insulated duct staged in a commercial building during install",
+        "caption": null,
+        "prefix": "",
+        "_objectKey": null,
+        "updatedAt": "2026-10-21T21:44:33.707Z",
+        "createdAt": "2026-10-21T21:44:32.585Z",
+        "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01.jpg",
+        "thumbnailURL": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01-400x300.webp",
+        "filename": "fuel-mechanical-air-handlers-warehouse-01.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 211959,
+        "width": 1320,
+        "height": 990,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01-400x300.webp",
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 23248,
+            "filename": "fuel-mechanical-air-handlers-warehouse-01-400x300.webp"
+          },
+          "card": {
+            "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01-768x576.webp",
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 66476,
+            "filename": "fuel-mechanical-air-handlers-warehouse-01-768x576.webp"
+          },
+          "hero": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          }
+        }
+      },
+      "gallery": [
+        {
+          "id": "6ad932c4059c186b5da5483a",
+          "image": {
+            "id": 6,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Multiple air handlers and insulated duct staged in a commercial building during install",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:33.707Z",
+            "createdAt": "2026-10-21T21:44:32.585Z",
+            "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01-400x300.webp",
+            "filename": "fuel-mechanical-air-handlers-warehouse-01.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 211959,
+            "width": 1320,
+            "height": 990,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 23248,
+                "filename": "fuel-mechanical-air-handlers-warehouse-01-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-01-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 66476,
+                "filename": "fuel-mechanical-air-handlers-warehouse-01-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c4059c186b5da5483b",
+          "image": {
+            "id": 7,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Vertical air handlers with sheet-metal plenums installed along a commercial wall",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:36.178Z",
+            "createdAt": "2026-10-21T21:44:34.820Z",
+            "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-02.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-02-400x300.webp",
+            "filename": "fuel-mechanical-air-handlers-warehouse-02.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 182725,
+            "width": 1320,
+            "height": 990,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-02-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 19664,
+                "filename": "fuel-mechanical-air-handlers-warehouse-02-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handlers-warehouse-02-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 55244,
+                "filename": "fuel-mechanical-air-handlers-warehouse-02-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c4059c186b5da5483c",
+          "image": {
+            "id": 5,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Upflow air handler with custom sheet-metal supply plenum and condensate piping",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:31.405Z",
+            "createdAt": "2026-10-21T21:44:30.277Z",
+            "url": "https://media.asandov.com/fuel-mechanical-air-handler-plenum.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-air-handler-plenum-400x300.webp",
+            "filename": "fuel-mechanical-air-handler-plenum.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 147239,
+            "width": 1320,
+            "height": 990,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handler-plenum-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 16688,
+                "filename": "fuel-mechanical-air-handler-plenum-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handler-plenum-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 42294,
+                "filename": "fuel-mechanical-air-handler-plenum-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c4059c186b5da5483d",
+          "image": {
+            "id": 4,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Air handler with sheet-metal plenum installed in a mechanical room",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:29.116Z",
+            "createdAt": "2026-10-21T21:44:27.907Z",
+            "url": "https://media.asandov.com/fuel-mechanical-air-handler-closet.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-air-handler-closet-400x300.webp",
+            "filename": "fuel-mechanical-air-handler-closet.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 310823,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handler-closet-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 14018,
+                "filename": "fuel-mechanical-air-handler-closet-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handler-closet-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 40494,
+                "filename": "fuel-mechanical-air-handler-closet-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-air-handler-closet-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 162506,
+                "filename": "fuel-mechanical-air-handler-closet-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c4059c186b5da5483e",
+          "image": {
+            "id": 8,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Horizontal air handler with condensate trap and insulated ductwork in an attic",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:38.566Z",
+            "createdAt": "2026-10-21T21:44:37.443Z",
+            "url": "https://media.asandov.com/fuel-mechanical-attic-air-handler.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-attic-air-handler-400x300.webp",
+            "filename": "fuel-mechanical-attic-air-handler.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 639732,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-attic-air-handler-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 29530,
+                "filename": "fuel-mechanical-attic-air-handler-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-attic-air-handler-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 97638,
+                "filename": "fuel-mechanical-attic-air-handler-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-attic-air-handler-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 421172,
+                "filename": "fuel-mechanical-attic-air-handler-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c4059c186b5da5483f",
+          "image": {
+            "id": 14,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician lowering a replacement coil into place inside an air handler",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:53.473Z",
+            "createdAt": "2026-10-21T21:44:52.377Z",
+            "url": "https://media.asandov.com/fuel-mechanical-coil-replacement.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-coil-replacement-400x300.webp",
+            "filename": "fuel-mechanical-coil-replacement.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 469982,
+            "width": 1536,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-replacement-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 33138,
+                "filename": "fuel-mechanical-coil-replacement-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-coil-replacement-768x1024.webp",
+                "width": 768,
+                "height": 1024,
+                "mimeType": "image/webp",
+                "filesize": 143004,
+                "filename": "fuel-mechanical-coil-replacement-768x1024.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        }
+      ],
+      "description": null,
+      "updatedAt": "2026-10-21T21:46:44.646Z",
+      "createdAt": "2026-10-21T21:46:44.646Z",
+      "_status": "published"
+    },
+    {
+      "id": 5,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "languages": [
+          "en"
+        ],
+        "updatedAt": "2026-10-21T20:36:03.824Z",
+        "createdAt": "2026-10-21T20:18:24.151Z"
+      },
+      "title": "Rooftop Unit Replacements",
+      "slug": "rooftop-unit-replacements",
+      "category": "Commercial HVAC",
+      "summary": "Packaged rooftop units and condensers replaced on commercial roofs, including curb adapters, line sets and disconnects.",
+      "location": null,
+      "completedOn": null,
+      "service": null,
+      "coverImage": {
+        "id": 32,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "languages": [
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:36:03.824Z",
+          "createdAt": "2026-10-21T20:18:24.151Z"
+        },
+        "alt": "New packaged rooftop unit set on an adapter curb on a commercial roof",
+        "caption": null,
+        "prefix": "",
+        "_objectKey": null,
+        "updatedAt": "2026-10-21T21:45:38.549Z",
+        "createdAt": "2026-10-21T21:45:37.215Z",
+        "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01.jpg",
+        "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-400x300.webp",
+        "filename": "fuel-mechanical-rooftop-unit-curb-01.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 573104,
+        "width": 2048,
+        "height": 1536,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-400x300.webp",
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 27266,
+            "filename": "fuel-mechanical-rooftop-unit-curb-01-400x300.webp"
+          },
+          "card": {
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-768x576.webp",
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 102922,
+            "filename": "fuel-mechanical-rooftop-unit-curb-01-768x576.webp"
+          },
+          "hero": {
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-1920x1440.webp",
+            "width": 1920,
+            "height": 1440,
+            "mimeType": "image/webp",
+            "filesize": 476202,
+            "filename": "fuel-mechanical-rooftop-unit-curb-01-1920x1440.webp"
+          }
+        }
+      },
+      "gallery": [
+        {
+          "id": "6ad932c2059c186b5da54832",
+          "image": {
+            "id": 32,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "New packaged rooftop unit set on an adapter curb on a commercial roof",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:38.549Z",
+            "createdAt": "2026-10-21T21:45:37.215Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-unit-curb-01.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 573104,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 27266,
+                "filename": "fuel-mechanical-rooftop-unit-curb-01-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 102922,
+                "filename": "fuel-mechanical-rooftop-unit-curb-01-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-01-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 476202,
+                "filename": "fuel-mechanical-rooftop-unit-curb-01-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54833",
+          "image": {
+            "id": 31,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Older packaged rooftop unit on a commercial roof",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:35.988Z",
+            "createdAt": "2026-10-21T21:45:34.886Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-before.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-unit-before-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-unit-before.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 461278,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-before-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 27632,
+                "filename": "fuel-mechanical-rooftop-unit-before-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-before-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 99894,
+                "filename": "fuel-mechanical-rooftop-unit-before-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-before-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 450534,
+                "filename": "fuel-mechanical-rooftop-unit-before-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54834",
+          "image": {
+            "id": 35,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Rooftop unit with new white curb adapters during a replacement",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:45.888Z",
+            "createdAt": "2026-10-21T21:45:44.707Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-replacement.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-unit-replacement-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-unit-replacement.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 287368,
+            "width": 1536,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-replacement-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 16688,
+                "filename": "fuel-mechanical-rooftop-unit-replacement-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-replacement-768x1024.webp",
+                "width": 768,
+                "height": 1024,
+                "mimeType": "image/webp",
+                "filesize": 107822,
+                "filename": "fuel-mechanical-rooftop-unit-replacement-768x1024.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54835",
+          "image": {
+            "id": 33,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Rooftop package unit with sheet-metal curb adapter after installation",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:40.839Z",
+            "createdAt": "2026-10-21T21:45:39.793Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-02.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-02-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-unit-curb-02.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 500167,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-02-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 23830,
+                "filename": "fuel-mechanical-rooftop-unit-curb-02-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-02-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 89210,
+                "filename": "fuel-mechanical-rooftop-unit-curb-02-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-02-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 401752,
+                "filename": "fuel-mechanical-rooftop-unit-curb-02-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54836",
+          "image": {
+            "id": 34,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Packaged rooftop unit installed on a commercial roof under clear skies",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:43.485Z",
+            "createdAt": "2026-10-21T21:45:42.119Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-03.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-03-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-unit-curb-03.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 516379,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-03-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 27252,
+                "filename": "fuel-mechanical-rooftop-unit-curb-03-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-03-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 98572,
+                "filename": "fuel-mechanical-rooftop-unit-curb-03-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-unit-curb-03-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 408146,
+                "filename": "fuel-mechanical-rooftop-unit-curb-03-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54837",
+          "image": {
+            "id": 29,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Condensing unit with disconnect and refrigerant lines installed on a commercial flat roof",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:31.519Z",
+            "createdAt": "2026-10-21T21:45:30.359Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-01.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-01-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-condenser-01.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 547198,
+            "width": 1170,
+            "height": 1557,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-01-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 34380,
+                "filename": "fuel-mechanical-rooftop-condenser-01-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-01-768x1022.webp",
+                "width": 768,
+                "height": 1022,
+                "mimeType": "image/webp",
+                "filesize": 209534,
+                "filename": "fuel-mechanical-rooftop-condenser-01-768x1022.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54838",
+          "image": {
+            "id": 30,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Rooftop condensing unit set on a commercial building with new line set and disconnect",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:33.672Z",
+            "createdAt": "2026-10-21T21:45:32.661Z",
+            "url": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-02.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-02-400x300.webp",
+            "filename": "fuel-mechanical-rooftop-condenser-02.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 775665,
+            "width": 1536,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-02-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 34978,
+                "filename": "fuel-mechanical-rooftop-condenser-02-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-rooftop-condenser-02-768x1024.webp",
+                "width": 768,
+                "height": 1024,
+                "mimeType": "image/webp",
+                "filesize": 227390,
+                "filename": "fuel-mechanical-rooftop-condenser-02-768x1024.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932c2059c186b5da54839",
+          "image": {
+            "id": 25,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Packaged HVAC unit installed on a pad beside a commercial building",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:21.673Z",
+            "createdAt": "2026-10-21T21:45:20.485Z",
+            "url": "https://media.asandov.com/fuel-mechanical-packaged-unit-ground.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-packaged-unit-ground-400x300.webp",
+            "filename": "fuel-mechanical-packaged-unit-ground.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 334831,
+            "width": 1440,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-packaged-unit-ground-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 23824,
+                "filename": "fuel-mechanical-packaged-unit-ground-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-packaged-unit-ground-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 85160,
+                "filename": "fuel-mechanical-packaged-unit-ground-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        }
+      ],
+      "description": null,
+      "updatedAt": "2026-10-21T21:46:42.333Z",
+      "createdAt": "2026-10-21T21:46:42.333Z",
+      "_status": "published"
+    },
+    {
+      "id": 4,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "languages": [
+          "en"
+        ],
+        "updatedAt": "2026-10-21T20:36:03.824Z",
+        "createdAt": "2026-10-21T20:18:24.151Z"
+      },
+      "title": "Commercial Ductwork Buildouts",
+      "slug": "commercial-ductwork-buildouts",
+      "category": "Ductwork",
+      "summary": "Supply and return ductwork fabricated and hung in new commercial buildouts, from main trunks to flex runs and finished diffusers.",
+      "location": null,
+      "completedOn": null,
+      "service": null,
+      "coverImage": {
+        "id": 18,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "languages": [
+            "en"
+          ],
+          "updatedAt": "2026-10-21T20:36:03.824Z",
+          "createdAt": "2026-10-21T20:18:24.151Z"
+        },
+        "alt": "New galvanized supply ductwork and blue flex runs hung through open framing in a commercial buildout",
+        "caption": null,
+        "prefix": "",
+        "_objectKey": null,
+        "updatedAt": "2026-10-21T21:45:05.469Z",
+        "createdAt": "2026-10-21T21:45:04.254Z",
+        "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01.jpg",
+        "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01-400x300.webp",
+        "filename": "fuel-mechanical-ductwork-buildout-01.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 418950,
+        "width": 1440,
+        "height": 1080,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01-400x300.webp",
+            "width": 400,
+            "height": 300,
+            "mimeType": "image/webp",
+            "filesize": 37402,
+            "filename": "fuel-mechanical-ductwork-buildout-01-400x300.webp"
+          },
+          "card": {
+            "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01-768x576.webp",
+            "width": 768,
+            "height": 576,
+            "mimeType": "image/webp",
+            "filesize": 113890,
+            "filename": "fuel-mechanical-ductwork-buildout-01-768x576.webp"
+          },
+          "hero": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          }
+        }
+      },
+      "gallery": [
+        {
+          "id": "6ad932bf059c186b5da54829",
+          "image": {
+            "id": 18,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "New galvanized supply ductwork and blue flex runs hung through open framing in a commercial buildout",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:05.469Z",
+            "createdAt": "2026-10-21T21:45:04.254Z",
+            "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01-400x300.webp",
+            "filename": "fuel-mechanical-ductwork-buildout-01.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 418950,
+            "width": 1440,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 37402,
+                "filename": "fuel-mechanical-ductwork-buildout-01-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-01-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 113890,
+                "filename": "fuel-mechanical-ductwork-buildout-01-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da5482a",
+          "image": {
+            "id": 19,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Main supply trunk and branch duct installed overhead before drywall in a commercial space",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:07.702Z",
+            "createdAt": "2026-10-21T21:45:06.573Z",
+            "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-02.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-02-400x300.webp",
+            "filename": "fuel-mechanical-ductwork-buildout-02.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 368576,
+            "width": 1440,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-02-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 30890,
+                "filename": "fuel-mechanical-ductwork-buildout-02-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-02-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 92400,
+                "filename": "fuel-mechanical-ductwork-buildout-02-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da5482b",
+          "image": {
+            "id": 20,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Overhead ductwork with flex connections to ceiling diffusers in a framed commercial buildout",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:09.968Z",
+            "createdAt": "2026-10-21T21:45:08.788Z",
+            "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-03.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-03-400x300.webp",
+            "filename": "fuel-mechanical-ductwork-buildout-03.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 406815,
+            "width": 1440,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-03-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 36374,
+                "filename": "fuel-mechanical-ductwork-buildout-03-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-03-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 113534,
+                "filename": "fuel-mechanical-ductwork-buildout-03-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da5482c",
+          "image": {
+            "id": 21,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Rectangular supply duct trunks branching across open joists in a new commercial interior",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:12.179Z",
+            "createdAt": "2026-10-21T21:45:11.055Z",
+            "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-04.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-04-400x300.webp",
+            "filename": "fuel-mechanical-ductwork-buildout-04.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 361681,
+            "width": 1440,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-04-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 31632,
+                "filename": "fuel-mechanical-ductwork-buildout-04-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-ductwork-buildout-04-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 95916,
+                "filename": "fuel-mechanical-ductwork-buildout-04-768x576.webp"
+              },
+              "hero": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da5482d",
+          "image": {
+            "id": 10,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Horizontal air handler hung above a drop ceiling with insulated supply duct",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:43.549Z",
+            "createdAt": "2026-10-21T21:44:42.317Z",
+            "url": "https://media.asandov.com/fuel-mechanical-ceiling-air-handler.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-ceiling-air-handler-400x300.webp",
+            "filename": "fuel-mechanical-ceiling-air-handler.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 423179,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-ceiling-air-handler-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 21798,
+                "filename": "fuel-mechanical-ceiling-air-handler-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-ceiling-air-handler-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 69584,
+                "filename": "fuel-mechanical-ceiling-air-handler-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-ceiling-air-handler-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 303940,
+                "filename": "fuel-mechanical-ceiling-air-handler-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da5482e",
+          "image": {
+            "id": 23,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician on a scissor lift running insulated flex duct across a vaulted ceiling",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:16.880Z",
+            "createdAt": "2026-10-21T21:45:15.755Z",
+            "url": "https://media.asandov.com/fuel-mechanical-flex-duct-lift-install.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-flex-duct-lift-install-400x300.webp",
+            "filename": "fuel-mechanical-flex-duct-lift-install.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 637788,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-flex-duct-lift-install-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 22958,
+                "filename": "fuel-mechanical-flex-duct-lift-install-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-flex-duct-lift-install-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 80066,
+                "filename": "fuel-mechanical-flex-duct-lift-install-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-flex-duct-lift-install-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 404340,
+                "filename": "fuel-mechanical-flex-duct-lift-install-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da5482f",
+          "image": {
+            "id": 16,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician on a ladder installing flex duct above a drop ceiling",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:44:58.524Z",
+            "createdAt": "2026-10-21T21:44:57.360Z",
+            "url": "https://media.asandov.com/fuel-mechanical-drop-ceiling-duct-install.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-drop-ceiling-duct-install-400x300.webp",
+            "filename": "fuel-mechanical-drop-ceiling-duct-install.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 581963,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-drop-ceiling-duct-install-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 25106,
+                "filename": "fuel-mechanical-drop-ceiling-duct-install-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-drop-ceiling-duct-install-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 79314,
+                "filename": "fuel-mechanical-drop-ceiling-duct-install-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-drop-ceiling-duct-install-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 373022,
+                "filename": "fuel-mechanical-drop-ceiling-duct-install-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da54830",
+          "image": {
+            "id": 24,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Technician working overhead from a scissor lift in a commercial space",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:19.389Z",
+            "createdAt": "2026-10-21T21:45:18.195Z",
+            "url": "https://media.asandov.com/fuel-mechanical-lift-ceiling-work.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-lift-ceiling-work-400x300.webp",
+            "filename": "fuel-mechanical-lift-ceiling-work.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 577860,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-lift-ceiling-work-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 23664,
+                "filename": "fuel-mechanical-lift-ceiling-work-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-lift-ceiling-work-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 75726,
+                "filename": "fuel-mechanical-lift-ceiling-work-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-lift-ceiling-work-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 346420,
+                "filename": "fuel-mechanical-lift-ceiling-work-1920x1440.webp"
+              }
+            }
+          }
+        },
+        {
+          "id": "6ad932bf059c186b5da54831",
+          "image": {
+            "id": 22,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "languages": [
+                "en"
+              ],
+              "updatedAt": "2026-10-21T20:36:03.824Z",
+              "createdAt": "2026-10-21T20:18:24.151Z"
+            },
+            "alt": "Finished commercial room with exposed spiral ductwork and supply diffusers",
+            "caption": null,
+            "prefix": "",
+            "_objectKey": null,
+            "updatedAt": "2026-10-21T21:45:14.502Z",
+            "createdAt": "2026-10-21T21:45:13.365Z",
+            "url": "https://media.asandov.com/fuel-mechanical-finished-space-spiral-duct.jpg",
+            "thumbnailURL": "https://media.asandov.com/fuel-mechanical-finished-space-spiral-duct-400x300.webp",
+            "filename": "fuel-mechanical-finished-space-spiral-duct.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 339033,
+            "width": 2048,
+            "height": 1536,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "https://media.asandov.com/fuel-mechanical-finished-space-spiral-duct-400x300.webp",
+                "width": 400,
+                "height": 300,
+                "mimeType": "image/webp",
+                "filesize": 13182,
+                "filename": "fuel-mechanical-finished-space-spiral-duct-400x300.webp"
+              },
+              "card": {
+                "url": "https://media.asandov.com/fuel-mechanical-finished-space-spiral-duct-768x576.webp",
+                "width": 768,
+                "height": 576,
+                "mimeType": "image/webp",
+                "filesize": 40504,
+                "filename": "fuel-mechanical-finished-space-spiral-duct-768x576.webp"
+              },
+              "hero": {
+                "url": "https://media.asandov.com/fuel-mechanical-finished-space-spiral-duct-1920x1440.webp",
+                "width": 1920,
+                "height": 1440,
+                "mimeType": "image/webp",
+                "filesize": 175426,
+                "filename": "fuel-mechanical-finished-space-spiral-duct-1920x1440.webp"
+              }
+            }
+          }
+        }
+      ],
+      "description": null,
+      "updatedAt": "2026-10-21T21:46:39.968Z",
+      "createdAt": "2026-10-21T21:46:39.964Z",
       "_status": "published"
     }
   ],
