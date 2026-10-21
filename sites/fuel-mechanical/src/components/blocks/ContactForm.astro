@@ -1,0 +1,367 @@
+---
+import { getContent, isObj, type Block, type Form } from '../../lib/cms'
+import { telHref } from '../../lib/contact'
+import { richTextToHTML } from '../../lib/richtext'
+
+type Props = { block: Extract<Block, { blockType: 'contactForm' }> }
+const { block } = Astro.props
+const { settings, forms } = await getContent()
+
+const formId = isObj<Form>(block.form) ? block.form.id : block.form
+const form = forms.find((f) => f.id === formId) ?? (isObj<Form>(block.form) ? block.form : undefined)
+
+const endpoint = (import.meta.env.PUBLIC_PAYLOAD_URL || process.env.PAYLOAD_URL || '').replace(/\/+$/, '')
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined
+// Without an endpoint and Turnstile key the CMS would reject every submission, so show phone/email instead.
+const enabled = Boolean(form && endpoint && siteKey)
+const confirmation = richTextToHTML(form?.confirmationMessage) || '<p>Thanks! We will be in touch soon.</p>'
+---
+
+<section class="section alt">
+  <div class="section-container">
+    <div class:list={['contact-grid', { single: !block.showContactInfo }]}>
+      {
+        block.showContactInfo && (
+          <div class="card contact-info">
+            <h2>Get In Touch</h2>
+            {block.intro && <p class="intro">{block.intro}</p>}
+            <div class="contact-methods">
+              {settings.phone && (
+                <div class="contact-method">
+                  <div class="contact-icon">📞</div>
+                  <div class="contact-details">
+                    <h3>Call Us</h3>
+                    <p><a href={telHref(settings.phone)}>{settings.phone}</a></p>
+                    <p class="note">Professional service when you need it</p>
+                  </div>
+                </div>
+              )}
+              {settings.email && (
+                <div class="contact-method">
+                  <div class="contact-icon">✉️</div>
+                  <div class="contact-details">
+                    <h3>Email Us</h3>
+                    <p><a href={`mailto:${settings.email}`}>{settings.email}</a></p>
+                    <p class="note">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+              )}
+              {settings.serviceArea && (
+                <div class="contact-method">
+                  <div class="contact-icon">📍</div>
+                  <div class="contact-details">
+                    <h3>Service Area</h3>
+                    <p>{settings.serviceArea}</p>
+                    <p class="note">Serving residential and commercial clients</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )
+      }
+
+      <div class="card contact-form-container">
+        <h2>{block.heading || 'Send Us a Message'}</h2>
+        {!block.showContactInfo && block.intro && <p class="intro">{block.intro}</p>}
+        {
+          enabled && form ? (
+            <form class="contact-form" data-endpoint={`${endpoint}/api/form-submissions?depth=0`} data-form-id={String(form.id)} novalidate>
+              {(form.fields ?? []).map((f) => {
+                if (f.blockType === 'message') return <div class="rich-text" set:html={richTextToHTML(f.message)} />
+                const id = `f-${f.name}`
+                const style = f.width ? `flex-basis: calc(${f.width}% - 1rem)` : undefined
+                return (
+                  <div class="form-group" style={style}>
+                    {f.blockType !== 'checkbox' && <label for={id}>{f.label || f.name}</label>}
+                    {f.blockType === 'textarea' ? (
+                      <textarea id={id} name={f.name} rows="5" required={Boolean(f.required)}>{f.defaultValue ?? ''}</textarea>
+                    ) : f.blockType === 'select' ? (
+                      <select id={id} name={f.name} required={Boolean(f.required)}>
+                        <option value="">{f.placeholder || 'Select an option'}</option>
+                        {(f.options ?? []).map((o) => <option value={o.value} selected={o.value === f.defaultValue}>{o.label}</option>)}
+                      </select>
+                    ) : f.blockType === 'checkbox' ? (
+                      <label class="checkbox">
+                        <input type="checkbox" id={id} name={f.name} checked={Boolean(f.defaultValue)} required={Boolean(f.required)} />
+                        {f.label || f.name}
+                      </label>
+                    ) : (
+                      <input
+                        id={id}
+                        name={f.name}
+                        type={f.blockType === 'email' ? 'email' : f.blockType === 'number' ? 'number' : f.name.includes('phone') ? 'tel' : 'text'}
+                        required={Boolean(f.required)}
+                        value={'defaultValue' in f && f.defaultValue != null ? String(f.defaultValue) : undefined}
+                        autocomplete={f.blockType === 'email' ? 'email' : f.name === 'name' ? 'name' : f.name.includes('phone') ? 'tel' : undefined}
+                      />
+                    )}
+                  </div>
+                )
+              })}
+              {/* Honeypot: hidden from people, filled by naive bots; the CMS rejects any submission that sets it. */}
+              <div class="hp" aria-hidden="true">
+                <label for="f-website">Website</label>
+                <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="cf-turnstile" data-sitekey={siteKey}></div>
+              <button type="submit" class="submit-btn">{form.submitButtonLabel || 'Send Message'}</button>
+              <p class="status" role="status" aria-live="polite"></p>
+              <div class="confirmation rich-text" hidden set:html={confirmation} data-redirect={form.confirmationType === 'redirect' ? form.redirect?.url : undefined} />
+            </form>
+          ) : (
+            <p class="intro">
+              Please call us at <a href={telHref(settings.phone)}>{settings.phone}</a>
+              {settings.email && (
+                <>
+                  {' '}or email <a href={`mailto:${settings.email}`}>{settings.email}</a>
+                </>
+              )}
+              .
+            </p>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+{enabled && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<script>
+  type Turnstile = { reset: (el?: Element) => void }
+
+  for (const form of document.querySelectorAll<HTMLFormElement>('form.contact-form')) {
+    const status = form.querySelector<HTMLElement>('.status')!
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!
+    const done = form.querySelector<HTMLElement>('.confirmation')!
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      if (!form.reportValidity()) return
+      const data = new FormData(form)
+      const token = String(data.get('cf-turnstile-response') ?? '')
+      if (!token) {
+        status.textContent = 'Please complete the spam check above.'
+        return
+      }
+      const submissionData = [...form.querySelectorAll<HTMLInputElement>('[name]')]
+        .filter((el) => el.closest('.form-group') && el.name)
+        .map((el) => ({ field: el.name, value: el.type === 'checkbox' ? String(el.checked) : el.value }))
+        .filter((r) => r.value !== '')
+
+      button.disabled = true
+      status.textContent = 'Sending…'
+      try {
+        const res = await fetch(form.dataset.endpoint!, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            form: Number(form.dataset.formId) || form.dataset.formId,
+            submissionData,
+            turnstileToken: token,
+            website: String(data.get('website') ?? ''),
+          }),
+        })
+        if (!res.ok) {
+          const body = await res.json().catch(() => null)
+          throw new Error(body?.errors?.[0]?.message || `HTTP ${res.status}`)
+        }
+        if (done.dataset.redirect) {
+          location.href = done.dataset.redirect
+          return
+        }
+        for (const el of form.querySelectorAll<HTMLElement>('.form-group, .cf-turnstile, button')) el.hidden = true
+        status.textContent = ''
+        done.hidden = false
+      } catch (err) {
+        status.textContent = `Sorry, that didn't go through (${(err as Error).message}). Please call us instead.`
+        button.disabled = false
+        ;(window as unknown as { turnstile?: Turnstile }).turnstile?.reset(form.querySelector('.cf-turnstile') ?? undefined)
+      }
+    })
+  }
+</script>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-grid.single {
+    grid-template-columns: minmax(0, 720px);
+    justify-content: center;
+  }
+
+  .contact-info,
+  .contact-form-container {
+    padding: 2.5rem;
+  }
+
+  h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .intro {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+
+  .intro a,
+  .contact-details a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .contact-method:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    width: 3rem;
+    text-align: center;
+  }
+
+  .contact-details h3 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .contact-details p {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-details .note {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+
+  .form-group label {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--bg-primary);
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .checkbox {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .submit-btn {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1 1 100%;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+
+  .status {
+    flex: 1 1 100%;
+    color: var(--text-light);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-info,
+    .contact-form-container {
+      padding: 2rem;
+    }
+
+    .form-group {
+      flex-basis: 100% !important;
+    }
+
+    .contact-method {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+</style>

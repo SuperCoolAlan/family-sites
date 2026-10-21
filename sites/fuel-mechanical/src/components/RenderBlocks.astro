@@ -1,0 +1,45 @@
+---
+import type { Block } from '../lib/cms'
+import BookingEmbed from './blocks/BookingEmbed.astro'
+import ContactForm from './blocks/ContactForm.astro'
+import CTA from './blocks/CTA.astro'
+import FAQ from './blocks/FAQ.astro'
+import Features from './blocks/Features.astro'
+import Gallery from './blocks/Gallery.astro'
+import Hero from './blocks/Hero.astro'
+import RichText from './blocks/RichText.astro'
+import ServicesGrid from './blocks/ServicesGrid.astro'
+import Testimonials from './blocks/Testimonials.astro'
+
+type Props = { blocks?: Block[] | null }
+const { blocks } = Astro.props
+---
+
+{
+  (blocks ?? []).map((block) => {
+    switch (block.blockType) {
+      case 'hero':
+        return <Hero block={block} />
+      case 'richText':
+        return <RichText block={block} />
+      case 'servicesGrid':
+        return <ServicesGrid block={block} />
+      case 'features':
+        return <Features block={block} />
+      case 'gallery':
+        return <Gallery block={block} />
+      case 'testimonials':
+        return <Testimonials block={block} />
+      case 'cta':
+        return <CTA block={block} />
+      case 'contactForm':
+        return <ContactForm block={block} />
+      case 'bookingEmbed':
+        return <BookingEmbed block={block} />
+      case 'faq':
+        return <FAQ block={block} />
+      default:
+        return null
+    }
+  })
+}

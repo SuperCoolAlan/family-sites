@@ -1,0 +1,60 @@
+---
+import { isAllowedBookingURL } from '../../../../../apps/cms/src/shared/booking'
+import { getContent, type Block } from '../../lib/cms'
+
+type Props = { block: Extract<Block, { blockType: 'bookingEmbed' }> }
+const { block } = Astro.props
+const { settings } = await getContent()
+
+const provider = block.useSiteDefault ? settings.booking?.provider : block.provider
+const url = block.useSiteDefault ? settings.booking?.url : block.url
+// Re-checked at build time so a bad value already in the DB (or snapshot) can't inject a third-party frame.
+const ok = Boolean(url && provider && provider !== 'none' && isAllowedBookingURL(url))
+const height = block.height ?? 700
+---
+
+{
+  ok && (
+    <section class="section">
+      <div class="section-container">
+        {block.heading && <h2 class="section-title text-center">{block.heading}</h2>}
+        {block.intro && <p class="section-intro">{block.intro}</p>}
+        <div class="card embed">
+          {provider === 'calendly' ? (
+            <>
+              <div class="calendly-inline-widget" data-url={url} style={`min-width:320px;height:${height}px;`} />
+              <script is:inline src="https://assets.calendly.com/assets/external/widget.js" async />
+            </>
+          ) : (
+            <iframe src={url} title={block.heading || 'Online booking'} loading="lazy" style={`height:${height}px`} referrerpolicy="strict-origin-when-cross-origin" />
+          )}
+        </div>
+        <p class="fallback">
+          Trouble loading? <a href={url} target="_blank" rel="noopener noreferrer">{settings.booking?.buttonLabel || 'Open booking page'}</a>
+        </p>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .embed {
+    overflow: hidden;
+  }
+
+  iframe {
+    width: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .fallback {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-light);
+  }
+
+  .fallback a {
+    color: var(--primary-blue);
+  }
+</style>

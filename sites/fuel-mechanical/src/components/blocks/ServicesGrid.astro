@@ -1,0 +1,83 @@
+---
+import { getContent, isObj, type Block, type Service } from '../../lib/cms'
+import { mediaURL } from '../../lib/media'
+import Icon from '../Icon.astro'
+
+type Props = { block: Extract<Block, { blockType: 'servicesGrid' }> }
+const { block } = Astro.props
+const { services } = await getContent()
+const picked = (block.services ?? []).filter(isObj<Service>)
+const items = picked.length ? picked : services
+---
+
+<section class="section alt" id={block.anchor || undefined}>
+  <div class="section-container">
+    {block.heading && <h2 class="section-title text-center">{block.heading}</h2>}
+    {block.intro && <p class="section-intro">{block.intro}</p>}
+    <div class="services-grid">
+      {
+        items.map((s) => {
+          const img = mediaURL(s.image, 'card')
+          return (
+            <article class="card service-card">
+              {img ? <img src={img} alt="" class="service-image" loading="lazy" /> : <div class="service-icon"><Icon name={s.icon} /></div>}
+              <h3>{s.title}</h3>
+              <p>{s.summary}</p>
+            </article>
+          )
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .service-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+  }
+
+  .service-icon {
+    color: var(--primary-blue);
+    background: rgba(59, 130, 246, 0.1);
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--text-light);
+    margin: 0;
+  }
+</style>

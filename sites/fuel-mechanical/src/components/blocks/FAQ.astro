@@ -1,0 +1,58 @@
+---
+import type { Block } from '../../lib/cms'
+
+type Props = { block: Extract<Block, { blockType: 'faq' }> }
+const { block } = Astro.props
+const items = block.items ?? []
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((i) => ({
+    '@type': 'Question',
+    name: i.question,
+    acceptedAnswer: { '@type': 'Answer', text: i.answer },
+  })),
+}
+---
+
+<section class="section">
+  <div class="section-container">
+    {block.heading && <h2 class="section-title text-center">{block.heading}</h2>}
+    <div class="faq">
+      {
+        items.map((i) => (
+          <details class="card item">
+            <summary>{i.question}</summary>
+            <p>{i.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
+</section>
+
+<style>
+  .faq {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .item {
+    padding: 1.25rem 1.5rem;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+  }
+
+  .item p {
+    color: var(--text-light);
+    margin: 0.75rem 0 0;
+  }
+</style>

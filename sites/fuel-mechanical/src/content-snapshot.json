@@ -1,0 +1,1123 @@
+{
+  "fetchedAt": "2026-10-21T20:04:48.304Z",
+  "tenant": {
+    "id": 1,
+    "name": "Fuel Mechanical LLC",
+    "slug": "fuel-mechanical",
+    "domain": "fuelmechanical.asandov.com",
+    "updatedAt": "2026-10-21T20:04:46.242Z",
+    "createdAt": "2026-10-21T20:04:46.242Z"
+  },
+  "settings": {
+    "id": 1,
+    "tenant": {
+      "id": 1,
+      "name": "Fuel Mechanical LLC",
+      "slug": "fuel-mechanical",
+      "domain": "fuelmechanical.asandov.com",
+      "updatedAt": "2026-10-21T20:04:46.242Z",
+      "createdAt": "2026-10-21T20:04:46.242Z"
+    },
+    "businessName": "Fuel Mechanical LLC",
+    "shortName": "Fuel Mechanical",
+    "tagline": "Heating & Cooling",
+    "description": "Professional heating and cooling services by Fuel Mechanical LLC. Expert HVAC installation, repair, and maintenance.",
+    "logo": null,
+    "logoOnDark": null,
+    "phone": "(918) 991-2324",
+    "email": "info@fuelmechanical.com",
+    "address": {
+      "street": null,
+      "city": null,
+      "state": null,
+      "zip": null,
+      "showOnSite": false
+    },
+    "serviceArea": "Tulsa Metro Area",
+    "hours": [],
+    "socialLinks": [
+      {
+        "id": "6ad91ae07d204f29058067d2",
+        "platform": "facebook",
+        "url": "https://www.facebook.com/fuelmechanical"
+      }
+    ],
+    "booking": {
+      "provider": "none",
+      "url": null,
+      "buttonLabel": "Book Online"
+    },
+    "footerBlurb": "Professional heating and cooling services",
+    "footerServices": [
+      {
+        "id": 1,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "updatedAt": "2026-10-21T20:04:46.242Z",
+          "createdAt": "2026-10-21T20:04:46.242Z"
+        },
+        "title": "HVAC Installation & Repair",
+        "slug": "hvac-installation-repair",
+        "order": 10,
+        "summary": "Complete heating and cooling system installs and repairs, sized and set up for efficient, reliable comfort.",
+        "icon": "wrench",
+        "image": null,
+        "description": null,
+        "updatedAt": "2026-10-21T20:04:47.957Z",
+        "createdAt": "2026-10-21T20:04:47.957Z",
+        "_status": "published"
+      },
+      {
+        "id": 2,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "updatedAt": "2026-10-21T20:04:46.242Z",
+          "createdAt": "2026-10-21T20:04:46.242Z"
+        },
+        "title": "Heating System Maintenance",
+        "slug": "heating-maintenance",
+        "order": 20,
+        "summary": "Seasonal furnace and heat pump tune-ups that catch problems early and keep your system running safely.",
+        "icon": "heating",
+        "image": null,
+        "description": null,
+        "updatedAt": "2026-10-21T20:04:47.965Z",
+        "createdAt": "2026-10-21T20:04:47.965Z",
+        "_status": "published"
+      },
+      {
+        "id": 3,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "updatedAt": "2026-10-21T20:04:46.242Z",
+          "createdAt": "2026-10-21T20:04:46.242Z"
+        },
+        "title": "Air Conditioning Services",
+        "slug": "air-conditioning",
+        "order": 30,
+        "summary": "AC repair, replacement and tune-ups to keep you cool through an Oklahoma summer.",
+        "icon": "cooling",
+        "image": null,
+        "description": null,
+        "updatedAt": "2026-10-21T20:04:47.971Z",
+        "createdAt": "2026-10-21T20:04:47.971Z",
+        "_status": "published"
+      },
+      {
+        "id": 5,
+        "tenant": {
+          "id": 1,
+          "name": "Fuel Mechanical LLC",
+          "slug": "fuel-mechanical",
+          "domain": "fuelmechanical.asandov.com",
+          "updatedAt": "2026-10-21T20:04:46.242Z",
+          "createdAt": "2026-10-21T20:04:46.242Z"
+        },
+        "title": "Water Heater Installation",
+        "slug": "water-heaters",
+        "order": 50,
+        "summary": "Tank and tankless water heater installation and replacement.",
+        "icon": "water",
+        "image": null,
+        "description": null,
+        "updatedAt": "2026-10-21T20:04:47.984Z",
+        "createdAt": "2026-10-21T20:04:47.984Z",
+        "_status": "published"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:04:48.059Z",
+    "createdAt": "2026-10-21T20:04:48.059Z"
+  },
+  "pages": [
+    {
+      "id": 1,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Home",
+      "slug": "home",
+      "navOrder": 10,
+      "layout": [
+        {
+          "id": "6ad91ae07d204f29058067d5",
+          "heading": "Fuel Mechanical LLC",
+          "tagline": "Heating & Cooling",
+          "subheading": "Professional HVAC services you can trust",
+          "showLogo": true,
+          "backgroundImage": null,
+          "size": "full",
+          "blockName": null,
+          "buttons": [
+            {
+              "id": "6ad91ae07d204f29058067d3",
+              "label": "Get A Quote",
+              "href": "/contact",
+              "style": "primary"
+            },
+            {
+              "id": "6ad91ae07d204f29058067d4",
+              "label": "Our Services",
+              "href": "/services",
+              "style": "secondary"
+            }
+          ],
+          "blockType": "hero"
+        },
+        {
+          "id": "6ad91ae07d204f29058067d6",
+          "heading": "What We Do",
+          "intro": "Heating, cooling and air quality for homes and businesses across the Tulsa metro.",
+          "anchor": null,
+          "blockName": null,
+          "blockType": "servicesGrid",
+          "services": []
+        },
+        {
+          "id": "6ad91ae07d204f29058067db",
+          "heading": "Why Choose Us",
+          "blockName": null,
+          "items": [
+            {
+              "id": "6ad91ae07d204f29058067d7",
+              "title": "Experienced Team",
+              "text": "Certified technicians with years of industry experience"
+            },
+            {
+              "id": "6ad91ae07d204f29058067d8",
+              "title": "Quality Work",
+              "text": "We stand behind our work with comprehensive warranties"
+            },
+            {
+              "id": "6ad91ae07d204f29058067d9",
+              "title": "Fair Pricing",
+              "text": "Transparent pricing with no hidden fees or surprises"
+            },
+            {
+              "id": "6ad91ae07d204f29058067da",
+              "title": "Licensed & Insured",
+              "text": "Fully licensed and insured for your peace of mind and protection"
+            }
+          ],
+          "blockType": "features"
+        },
+        {
+          "id": "6ad91ae07d204f29058067de",
+          "heading": "Ready when you need us",
+          "text": "Tell us about your heating or cooling project and we will get back to you with a quote.",
+          "tone": "brand",
+          "blockName": null,
+          "buttons": [
+            {
+              "id": "6ad91ae07d204f29058067dc",
+              "label": "Get A Quote",
+              "href": "/contact"
+            },
+            {
+              "id": "6ad91ae07d204f29058067dd",
+              "label": "Call (918) 991-2324",
+              "href": "tel:+19189912324"
+            }
+          ],
+          "blockType": "cta"
+        }
+      ],
+      "meta": {
+        "title": "Fuel Mechanical LLC - Heating & Cooling Services",
+        "description": "Professional heating and cooling services by Fuel Mechanical LLC. Expert HVAC installation, repair, and maintenance.",
+        "image": null
+      },
+      "updatedAt": "2026-10-21T20:04:48.077Z",
+      "createdAt": "2026-10-21T20:04:48.077Z",
+      "_status": "published"
+    },
+    {
+      "id": 2,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "About",
+      "slug": "about",
+      "navOrder": 20,
+      "layout": [
+        {
+          "id": "6ad91ae07d204f29058067df",
+          "heading": "About Fuel Mechanical",
+          "tagline": null,
+          "subheading": "Your trusted heating and cooling professionals",
+          "showLogo": false,
+          "backgroundImage": null,
+          "size": "compact",
+          "blockName": null,
+          "buttons": [],
+          "blockType": "hero"
+        },
+        {
+          "id": "6ad91ae07d204f29058067e0",
+          "heading": "Our Story",
+          "content": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Fuel Mechanical LLC has been serving the community with reliable heating and cooling solutions. We pride ourselves on delivering precision workmanship and exceptional quality in every project for both residential and commercial clients.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textStyle": "",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our team of certified technicians brings years of experience and meticulous attention to detail to every installation, ensuring your comfort systems operate with optimal efficiency and reliability.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textStyle": "",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "anchor": "our-story",
+          "blockName": null,
+          "blockType": "richText"
+        },
+        {
+          "id": "6ad91ae07d204f29058067e1",
+          "heading": "Our Services",
+          "intro": null,
+          "anchor": "our-services",
+          "blockName": null,
+          "blockType": "servicesGrid",
+          "services": []
+        },
+        {
+          "id": "6ad91ae07d204f29058067e6",
+          "heading": "Why Choose Us",
+          "blockName": null,
+          "items": [
+            {
+              "id": "6ad91ae07d204f29058067e2",
+              "title": "Experienced Team",
+              "text": "Certified technicians with years of industry experience"
+            },
+            {
+              "id": "6ad91ae07d204f29058067e3",
+              "title": "Quality Work",
+              "text": "We stand behind our work with comprehensive warranties"
+            },
+            {
+              "id": "6ad91ae07d204f29058067e4",
+              "title": "Fair Pricing",
+              "text": "Transparent pricing with no hidden fees or surprises"
+            },
+            {
+              "id": "6ad91ae07d204f29058067e5",
+              "title": "Licensed & Insured",
+              "text": "Fully licensed and insured for your peace of mind and protection"
+            }
+          ],
+          "blockType": "features"
+        }
+      ],
+      "meta": {
+        "title": "About Us - Fuel Mechanical LLC",
+        "description": "Learn about Fuel Mechanical LLC, your trusted heating and cooling professionals with years of experience serving the community.",
+        "image": null
+      },
+      "updatedAt": "2026-10-21T20:04:48.105Z",
+      "createdAt": "2026-10-21T20:04:48.105Z",
+      "_status": "published"
+    },
+    {
+      "id": 3,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Services",
+      "slug": "services",
+      "navOrder": 30,
+      "layout": [
+        {
+          "id": "6ad91ae07d204f29058067e7",
+          "heading": "Our Services",
+          "tagline": null,
+          "subheading": "Heating, cooling and air quality for homes and businesses",
+          "showLogo": false,
+          "backgroundImage": null,
+          "size": "compact",
+          "blockName": null,
+          "buttons": [],
+          "blockType": "hero"
+        },
+        {
+          "id": "6ad91ae07d204f29058067e8",
+          "heading": "How We Can Help",
+          "intro": null,
+          "anchor": null,
+          "blockName": null,
+          "blockType": "servicesGrid",
+          "services": []
+        },
+        {
+          "id": "6ad91ae07d204f29058067ec",
+          "heading": "Frequently Asked Questions",
+          "blockName": null,
+          "items": [
+            {
+              "id": "6ad91ae07d204f29058067e9",
+              "question": "What areas do you serve?",
+              "answer": "We serve residential and commercial clients throughout the Tulsa Metro Area."
+            },
+            {
+              "id": "6ad91ae07d204f29058067ea",
+              "question": "Do you work on commercial systems?",
+              "answer": "Yes. Along with homes, we install and service commercial HVAC systems and industrial air handlers."
+            },
+            {
+              "id": "6ad91ae07d204f29058067eb",
+              "question": "Are you licensed and insured?",
+              "answer": "Yes, Fuel Mechanical is fully licensed and insured for your peace of mind and protection."
+            }
+          ],
+          "blockType": "faq"
+        },
+        {
+          "id": "6ad91ae07d204f29058067ee",
+          "heading": "Need Service?",
+          "text": "For heating and cooling service, call us at (918) 991-2324. We provide reliable solutions to restore your comfort.",
+          "tone": "urgent",
+          "blockName": null,
+          "buttons": [
+            {
+              "id": "6ad91ae07d204f29058067ed",
+              "label": "Call (918) 991-2324",
+              "href": "tel:+19189912324"
+            }
+          ],
+          "blockType": "cta"
+        }
+      ],
+      "meta": {
+        "title": "Services - Fuel Mechanical LLC",
+        "description": "HVAC installation and repair, heating and air conditioning service, air quality, water heaters, ductwork and commercial HVAC in the Tulsa metro.",
+        "image": null
+      },
+      "updatedAt": "2026-10-21T20:04:48.126Z",
+      "createdAt": "2026-10-21T20:04:48.126Z",
+      "_status": "published"
+    },
+    {
+      "id": 4,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Portfolio",
+      "slug": "portfolio",
+      "navOrder": 40,
+      "layout": [
+        {
+          "id": "6ad91ae07d204f29058067ef",
+          "heading": "Our Portfolio",
+          "tagline": null,
+          "subheading": "Quality workmanship and precision",
+          "showLogo": false,
+          "backgroundImage": null,
+          "size": "compact",
+          "blockName": null,
+          "buttons": [],
+          "blockType": "hero"
+        },
+        {
+          "id": "6ad91ae07d204f29058067f0",
+          "heading": "See Our Work in Action",
+          "intro": "Take a look at some of our recent HVAC installations, repairs, and maintenance projects. Each project showcases our commitment to precision and quality craftsmanship.",
+          "source": "projects",
+          "blockName": null,
+          "images": [],
+          "blockType": "gallery",
+          "projects": []
+        },
+        {
+          "id": "6ad91ae07d204f29058067f2",
+          "heading": "More projects on Facebook",
+          "text": "Follow us on Facebook to see our latest projects and updates.",
+          "tone": "brand",
+          "blockName": null,
+          "buttons": [
+            {
+              "id": "6ad91ae07d204f29058067f1",
+              "label": "Visit Our Facebook Page",
+              "href": "https://www.facebook.com/fuelmechanical"
+            }
+          ],
+          "blockType": "cta"
+        }
+      ],
+      "meta": {
+        "title": "Portfolio - Fuel Mechanical LLC",
+        "description": "View our portfolio of heating and cooling projects. See the quality workmanship and precision engineering that Fuel Mechanical LLC delivers.",
+        "image": null
+      },
+      "updatedAt": "2026-10-21T20:04:48.146Z",
+      "createdAt": "2026-10-21T20:04:48.145Z",
+      "_status": "published"
+    },
+    {
+      "id": 5,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Contact",
+      "slug": "contact",
+      "navOrder": 50,
+      "layout": [
+        {
+          "id": "6ad91ae07d204f29058067f3",
+          "heading": "Contact Us",
+          "tagline": null,
+          "subheading": "Ready to help with all your heating and cooling needs",
+          "showLogo": false,
+          "backgroundImage": null,
+          "size": "compact",
+          "blockName": null,
+          "buttons": [],
+          "blockType": "hero"
+        },
+        {
+          "id": "6ad91ae07d204f29058067f4",
+          "heading": "Send Us a Message",
+          "intro": "Have a question or need service? We're here to help. Contact us today for fast, reliable heating and cooling solutions.",
+          "form": {
+            "id": 1,
+            "tenant": {
+              "id": 1,
+              "name": "Fuel Mechanical LLC",
+              "slug": "fuel-mechanical",
+              "domain": "fuelmechanical.asandov.com",
+              "updatedAt": "2026-10-21T20:04:46.242Z",
+              "createdAt": "2026-10-21T20:04:46.242Z"
+            },
+            "title": "Contact - Fuel Mechanical",
+            "fields": [
+              {
+                "id": "6ad91ae07d204f29058067c7",
+                "name": "name",
+                "label": "Full Name",
+                "width": 100,
+                "defaultValue": null,
+                "required": true,
+                "blockName": null,
+                "blockType": "text"
+              },
+              {
+                "id": "6ad91ae07d204f29058067c8",
+                "name": "email",
+                "label": "Email Address",
+                "width": 50,
+                "required": true,
+                "blockName": null,
+                "blockType": "email"
+              },
+              {
+                "id": "6ad91ae07d204f29058067c9",
+                "name": "phone",
+                "label": "Phone Number",
+                "width": 50,
+                "defaultValue": null,
+                "required": false,
+                "blockName": null,
+                "blockType": "text"
+              },
+              {
+                "id": "6ad91ae07d204f29058067cf",
+                "name": "service",
+                "label": "Service Needed",
+                "width": 100,
+                "defaultValue": null,
+                "placeholder": "Select a service",
+                "required": false,
+                "blockName": null,
+                "options": [
+                  {
+                    "id": "6ad91ae07d204f29058067ca",
+                    "label": "HVAC Installation",
+                    "value": "installation"
+                  },
+                  {
+                    "id": "6ad91ae07d204f29058067cb",
+                    "label": "Repair Service",
+                    "value": "repair"
+                  },
+                  {
+                    "id": "6ad91ae07d204f29058067cc",
+                    "label": "Maintenance",
+                    "value": "maintenance"
+                  },
+                  {
+                    "id": "6ad91ae07d204f29058067cd",
+                    "label": "Emergency Service",
+                    "value": "emergency"
+                  },
+                  {
+                    "id": "6ad91ae07d204f29058067ce",
+                    "label": "Other",
+                    "value": "other"
+                  }
+                ],
+                "blockType": "select"
+              },
+              {
+                "id": "6ad91ae07d204f29058067d0",
+                "name": "message",
+                "label": "Message",
+                "width": 100,
+                "defaultValue": null,
+                "required": true,
+                "blockName": null,
+                "blockType": "textarea"
+              }
+            ],
+            "submitButtonLabel": "Send Message",
+            "confirmationType": "message",
+            "confirmationMessage": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "mode": "normal",
+                        "text": "Thanks for reaching out! We'll respond within 24 hours.",
+                        "type": "text",
+                        "style": "",
+                        "detail": 0,
+                        "format": 0,
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "textStyle": "",
+                    "textFormat": 0
+                  }
+                ],
+                "direction": "ltr"
+              }
+            },
+            "redirect": {
+              "url": null
+            },
+            "updatedAt": "2026-10-21T20:04:48.048Z",
+            "createdAt": "2026-10-21T20:04:48.048Z",
+            "emails": []
+          },
+          "showContactInfo": true,
+          "blockName": null,
+          "blockType": "contactForm"
+        },
+        {
+          "id": "6ad91ae07d204f29058067f6",
+          "heading": "Need Service?",
+          "text": "For heating and cooling service, call us at (918) 991-2324. We provide reliable solutions to restore your comfort.",
+          "tone": "urgent",
+          "blockName": null,
+          "buttons": [
+            {
+              "id": "6ad91ae07d204f29058067f5",
+              "label": "Call (918) 991-2324",
+              "href": "tel:+19189912324"
+            }
+          ],
+          "blockType": "cta"
+        }
+      ],
+      "meta": {
+        "title": "Contact Us - Fuel Mechanical LLC",
+        "description": "Get in touch with Fuel Mechanical LLC for all your heating and cooling needs. Call us today or fill out our contact form.",
+        "image": null
+      },
+      "updatedAt": "2026-10-21T20:04:48.166Z",
+      "createdAt": "2026-10-21T20:04:48.166Z",
+      "_status": "published"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "HVAC Installation & Repair",
+      "slug": "hvac-installation-repair",
+      "order": 10,
+      "summary": "Complete heating and cooling system installs and repairs, sized and set up for efficient, reliable comfort.",
+      "icon": "wrench",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.957Z",
+      "createdAt": "2026-10-21T20:04:47.957Z",
+      "_status": "published"
+    },
+    {
+      "id": 2,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Heating System Maintenance",
+      "slug": "heating-maintenance",
+      "order": 20,
+      "summary": "Seasonal furnace and heat pump tune-ups that catch problems early and keep your system running safely.",
+      "icon": "heating",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.965Z",
+      "createdAt": "2026-10-21T20:04:47.965Z",
+      "_status": "published"
+    },
+    {
+      "id": 3,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Air Conditioning Services",
+      "slug": "air-conditioning",
+      "order": 30,
+      "summary": "AC repair, replacement and tune-ups to keep you cool through an Oklahoma summer.",
+      "icon": "cooling",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.971Z",
+      "createdAt": "2026-10-21T20:04:47.971Z",
+      "_status": "published"
+    },
+    {
+      "id": 4,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Air Quality",
+      "slug": "air-quality",
+      "order": 40,
+      "summary": "Filtration, ventilation and humidity solutions for cleaner, healthier indoor air.",
+      "icon": "air",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.978Z",
+      "createdAt": "2026-10-21T20:04:47.978Z",
+      "_status": "published"
+    },
+    {
+      "id": 5,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Water Heater Installation",
+      "slug": "water-heaters",
+      "order": 50,
+      "summary": "Tank and tankless water heater installation and replacement.",
+      "icon": "water",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.984Z",
+      "createdAt": "2026-10-21T20:04:47.984Z",
+      "_status": "published"
+    },
+    {
+      "id": 6,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Ductwork Installation",
+      "slug": "ductwork",
+      "order": 60,
+      "summary": "Precision ductwork design and installation for even airflow in every room.",
+      "icon": "hvac",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.990Z",
+      "createdAt": "2026-10-21T20:04:47.990Z",
+      "_status": "published"
+    },
+    {
+      "id": 7,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Commercial HVAC",
+      "slug": "commercial-hvac",
+      "order": 70,
+      "summary": "Installation and service for rooftop units and commercial heating and cooling systems.",
+      "icon": "commercial",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:47.998Z",
+      "createdAt": "2026-10-21T20:04:47.998Z",
+      "_status": "published"
+    },
+    {
+      "id": 8,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Industrial Air Handlers",
+      "slug": "industrial-air-handlers",
+      "order": 80,
+      "summary": "Installation and maintenance of air handling units for industrial and large commercial spaces.",
+      "icon": "industrial",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:48.007Z",
+      "createdAt": "2026-10-21T20:04:48.007Z",
+      "_status": "published"
+    },
+    {
+      "id": 9,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Emergency Repairs",
+      "slug": "emergency-repairs",
+      "order": 90,
+      "summary": "When your heat or AC quits, call us and we will work to restore your comfort fast.",
+      "icon": "emergency",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:48.013Z",
+      "createdAt": "2026-10-21T20:04:48.013Z",
+      "_status": "published"
+    },
+    {
+      "id": 10,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "System Inspections",
+      "slug": "system-inspections",
+      "order": 100,
+      "summary": "Thorough inspections for home purchases, insurance, or peace of mind.",
+      "icon": "wrench",
+      "image": null,
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:48.019Z",
+      "createdAt": "2026-10-21T20:04:48.019Z",
+      "_status": "published"
+    }
+  ],
+  "projects": [
+    {
+      "id": 3,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Air Conditioning Tune-Up",
+      "slug": "air-conditioning-tune-up",
+      "category": "AC Maintenance",
+      "summary": "Comprehensive maintenance service ensuring peak efficiency and extending system lifespan.",
+      "location": null,
+      "completedOn": null,
+      "service": null,
+      "coverImage": null,
+      "gallery": [],
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:48.038Z",
+      "createdAt": "2026-10-21T20:04:48.038Z",
+      "_status": "published"
+    },
+    {
+      "id": 2,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Commercial Heating Service",
+      "slug": "commercial-heating-service",
+      "category": "Heating Repair",
+      "summary": "Emergency repair and maintenance on commercial heating system, restoring optimal performance.",
+      "location": null,
+      "completedOn": null,
+      "service": null,
+      "coverImage": null,
+      "gallery": [],
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:48.033Z",
+      "createdAt": "2026-10-21T20:04:48.033Z",
+      "_status": "published"
+    },
+    {
+      "id": 1,
+      "tenant": {
+        "id": 1,
+        "name": "Fuel Mechanical LLC",
+        "slug": "fuel-mechanical",
+        "domain": "fuelmechanical.asandov.com",
+        "updatedAt": "2026-10-21T20:04:46.242Z",
+        "createdAt": "2026-10-21T20:04:46.242Z"
+      },
+      "title": "Residential HVAC System",
+      "slug": "residential-hvac-system",
+      "category": "HVAC Installation",
+      "summary": "Complete system installation with precision ductwork and energy-efficient components.",
+      "location": null,
+      "completedOn": null,
+      "service": null,
+      "coverImage": null,
+      "gallery": [],
+      "description": null,
+      "updatedAt": "2026-10-21T20:04:48.026Z",
+      "createdAt": "2026-10-21T20:04:48.026Z",
+      "_status": "published"
+    }
+  ],
+  "forms": [
+    {
+      "id": 1,
+      "tenant": 1,
+      "title": "Contact - Fuel Mechanical",
+      "fields": [
+        {
+          "id": "6ad91ae07d204f29058067c7",
+          "name": "name",
+          "label": "Full Name",
+          "width": 100,
+          "defaultValue": null,
+          "required": true,
+          "blockName": null,
+          "blockType": "text"
+        },
+        {
+          "id": "6ad91ae07d204f29058067c8",
+          "name": "email",
+          "label": "Email Address",
+          "width": 50,
+          "required": true,
+          "blockName": null,
+          "blockType": "email"
+        },
+        {
+          "id": "6ad91ae07d204f29058067c9",
+          "name": "phone",
+          "label": "Phone Number",
+          "width": 50,
+          "defaultValue": null,
+          "required": false,
+          "blockName": null,
+          "blockType": "text"
+        },
+        {
+          "id": "6ad91ae07d204f29058067cf",
+          "name": "service",
+          "label": "Service Needed",
+          "width": 100,
+          "defaultValue": null,
+          "placeholder": "Select a service",
+          "required": false,
+          "blockName": null,
+          "options": [
+            {
+              "id": "6ad91ae07d204f29058067ca",
+              "label": "HVAC Installation",
+              "value": "installation"
+            },
+            {
+              "id": "6ad91ae07d204f29058067cb",
+              "label": "Repair Service",
+              "value": "repair"
+            },
+            {
+              "id": "6ad91ae07d204f29058067cc",
+              "label": "Maintenance",
+              "value": "maintenance"
+            },
+            {
+              "id": "6ad91ae07d204f29058067cd",
+              "label": "Emergency Service",
+              "value": "emergency"
+            },
+            {
+              "id": "6ad91ae07d204f29058067ce",
+              "label": "Other",
+              "value": "other"
+            }
+          ],
+          "blockType": "select"
+        },
+        {
+          "id": "6ad91ae07d204f29058067d0",
+          "name": "message",
+          "label": "Message",
+          "width": 100,
+          "defaultValue": null,
+          "required": true,
+          "blockName": null,
+          "blockType": "textarea"
+        }
+      ],
+      "submitButtonLabel": "Send Message",
+      "confirmationType": "message",
+      "confirmationMessage": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Thanks for reaching out! We'll respond within 24 hours.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "redirect": {
+        "url": null
+      },
+      "updatedAt": "2026-10-21T20:04:48.048Z",
+      "createdAt": "2026-10-21T20:04:48.048Z",
+      "emails": []
+    }
+  ]
+}

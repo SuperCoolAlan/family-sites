@@ -1,0 +1,66 @@
+---
+import type { Block } from '../../lib/cms'
+import { isExternal, safeHref } from '../../lib/links'
+
+type Props = { block: Extract<Block, { blockType: 'cta' }> }
+const { block } = Astro.props
+---
+
+<section class="section">
+  <div class="section-container">
+    <div class:list={['cta', block.tone === 'urgent' ? 'urgent' : 'brand']}>
+      <h2>{block.heading}</h2>
+      {block.text && <p>{block.text}</p>}
+      {
+        block.buttons && block.buttons.length > 0 && (
+          <div class="cta-buttons">
+            {block.buttons.map((b, i) => (
+              <a
+                href={safeHref(b.href)}
+                class:list={['btn', i === 0 ? 'btn-primary' : 'btn-secondary']}
+                {...(isExternal(b.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                {b.label}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .brand {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  }
+
+  .urgent {
+    background: linear-gradient(135deg, var(--accent-red), #dc2626);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

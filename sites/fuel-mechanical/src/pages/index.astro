@@ -1,0 +1,12 @@
+---
+import RenderBlocks from '../components/RenderBlocks.astro'
+import Base from '../layouts/Base.astro'
+import { getContent } from '../lib/cms'
+
+const { pages } = await getContent()
+const page = pages.find((p) => p.slug === 'home')!
+---
+
+<Base title={page.meta?.title || page.title} description={page.meta?.description} image={page.meta?.image}>
+  <RenderBlocks blocks={page.layout} />
+</Base>

@@ -1,0 +1,16 @@
+---
+import Hero from '../components/blocks/Hero.astro'
+import Base from '../layouts/Base.astro'
+---
+
+<Base title="Page not found">
+  <Hero
+    block={{
+      blockType: 'hero',
+      heading: 'Page not found',
+      subheading: "That page doesn't exist (or moved).",
+      size: 'compact',
+      buttons: [{ label: 'Go home', href: '/', style: 'primary' }],
+    }}
+  />
+</Base>

@@ -1,0 +1,72 @@
+---
+import type { Project } from '../lib/cms'
+import { mediaURL, srcset } from '../lib/media'
+
+type Props = { project: Project }
+const { project } = Astro.props
+const cover = project.coverImage ?? project.gallery?.[0]?.image
+const img = mediaURL(cover, 'card')
+---
+
+<a class="card project-card" href={`/portfolio/${project.slug}`}>
+  {
+    img ? (
+      <img src={img} srcset={srcset(cover)} sizes="(max-width: 768px) 100vw, 400px" alt={typeof cover === 'object' ? cover?.alt : ''} class="project-image" loading="lazy" />
+    ) : (
+      <div class="project-image-placeholder">
+        <span>{project.category || project.title}</span>
+      </div>
+    )
+  }
+  <div class="project-info">
+    <h3>{project.title}</h3>
+    <p>{project.summary}</p>
+  </div>
+</a>
+
+<style>
+  .project-card {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-image,
+  .project-image-placeholder {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .project-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .project-info {
+    padding: 1.5rem;
+  }
+
+  .project-info h3 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .project-info p {
+    color: var(--text-light);
+    margin: 0;
+  }
+</style>

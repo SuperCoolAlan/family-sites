@@ -1,0 +1,48 @@
+---
+import type { Block } from '../../lib/cms'
+
+type Props = { block: Extract<Block, { blockType: 'testimonials' }> }
+const { block } = Astro.props
+---
+
+<section class="section alt">
+  <div class="section-container">
+    {block.heading && <h2 class="section-title text-center">{block.heading}</h2>}
+    <div class="quotes">
+      {
+        (block.items ?? []).map((t) => (
+          <blockquote class="card quote">
+            <p>“{t.quote}”</p>
+            <footer>
+              <strong>{t.author}</strong>
+              {t.location && <span>, {t.location}</span>}
+            </footer>
+          </blockquote>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .quotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .quote {
+    padding: 2rem;
+    margin: 0;
+    border-left: 4px solid var(--accent-orange);
+  }
+
+  .quote p {
+    color: var(--text-dark);
+    font-style: italic;
+  }
+
+  .quote footer {
+    color: var(--text-light);
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import type { GetStaticPaths } from 'astro'
+
+import RenderBlocks from '../components/RenderBlocks.astro'
+import Base from '../layouts/Base.astro'
+import { getContent, type Page } from '../lib/cms'
+
+export const getStaticPaths = (async () => {
+  const { pages } = await getContent()
+  return pages.filter((p) => p.slug !== 'home').map((page) => ({ params: { slug: page.slug }, props: { page } }))
+}) satisfies GetStaticPaths
+
+const { page } = Astro.props as { page: Page }
+const { settings } = await getContent()
+---
+
+<Base title={page.meta?.title || `${page.title} - ${settings.businessName}`} description={page.meta?.description} image={page.meta?.image}>
+  <RenderBlocks blocks={page.layout} />
+</Base>

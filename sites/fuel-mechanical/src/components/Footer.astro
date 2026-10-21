@@ -1,0 +1,249 @@
+---
+import { getContent, isObj, type Service } from '../lib/cms'
+import { telHref } from '../lib/contact'
+import { mediaURL } from '../lib/media'
+
+const { settings, pages } = await getContent()
+const links = pages
+  .filter((p) => typeof p.navOrder === 'number')
+  .sort((a, b) => (a.navOrder ?? 0) - (b.navOrder ?? 0))
+  .map((p) => ({ label: p.title, href: p.slug === 'home' ? '/' : `/${p.slug}` }))
+const footerServices = (settings.footerServices ?? []).filter(isObj<Service>)
+const logo = mediaURL(settings.logo, 'card') ?? '/logo-full-color.svg'
+const year = new Date().getFullYear()
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-brand">
+          <img src={logo} alt={settings.businessName} class="footer-logo" />
+          <h3>{settings.businessName}</h3>
+          {settings.footerBlurb && <p>{settings.footerBlurb}</p>}
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      {
+        footerServices.length > 0 && (
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              {footerServices.map((s) => <li>{s.title}</li>)}
+            </ul>
+          </div>
+        )
+      }
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          {settings.phone && <p><a href={telHref(settings.phone)}>{settings.phone}</a></p>}
+          {settings.email && <p><a href={`mailto:${settings.email}`}>{settings.email}</a></p>}
+          {settings.serviceArea && <p>{settings.serviceArea}</p>}
+          {
+            (settings.hours ?? []).map((h) => (
+              <p class="hours">
+                {h.days}: {h.hours}
+              </p>
+            ))
+          }
+          {
+            (settings.socialLinks ?? []).filter((s) => /^https:\/\//.test(s.url)).map((s) => (
+              <p>
+                <a href={s.url} target="_blank" rel="noopener noreferrer" class="social">
+                  {s.platform.charAt(0).toUpperCase() + s.platform.slice(1)}
+                </a>
+              </p>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p>&copy; {year} {settings.businessName}. All rights reserved.</p>
+
+        <div class="theme-toggle">
+          <button class="toggle-btn" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+            <span class="toggle-icon" data-theme-icon>🌙</span>
+            <span class="toggle-text" data-theme-text>Dark Mode</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const root = document.documentElement
+  const btn = document.querySelector<HTMLButtonElement>('[data-theme-toggle]')
+  const icon = document.querySelector('[data-theme-icon]')
+  const label = document.querySelector('[data-theme-text]')
+  const paint = () => {
+    const dark = root.classList.contains('dark')
+    if (icon) icon.textContent = dark ? '☀️' : '🌙'
+    if (label) label.textContent = `${dark ? 'Light' : 'Dark'} Mode`
+  }
+  btn?.addEventListener('click', () => {
+    root.classList.toggle('dark')
+    try {
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light')
+    } catch {}
+    paint()
+  })
+  paint()
+</script>
+
+<style>
+  .footer {
+    background-color: var(--footer-bg, #1f2937);
+    color: var(--footer-text, white);
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-section h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    transform: skewX(-8deg);
+  }
+
+  .footer-section h4 {
+    color: var(--footer-heading, #fbbf24);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand p {
+    color: var(--footer-text-light, #d1d5db);
+    margin-top: 0.5rem;
+  }
+
+  .footer-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    color: var(--footer-text-light, #d1d5db);
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a,
+  .contact-info a {
+    color: var(--footer-text-light, #d1d5db);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover,
+  .contact-info a:hover {
+    color: var(--accent-orange);
+  }
+
+  .contact-info p {
+    margin-bottom: 0.5rem;
+    color: var(--footer-text-light, #d1d5db);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--footer-border, #374151);
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom p {
+    color: var(--footer-text-light, #d1d5db);
+    margin: 0;
+  }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle-btn {
+    background: var(--toggle-bg, #374151);
+    border: 2px solid var(--toggle-border, #4b5563);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    color: var(--footer-text, white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn:hover {
+    background: var(--toggle-hover, #4b5563);
+    border-color: var(--accent-orange);
+  }
+
+  .toggle-icon {
+    font-size: 1.2rem;
+  }
+
+  .toggle-text {
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 0 1rem;
+    }
+
+    .footer-content {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 0 1.5rem;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+</style>

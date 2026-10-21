@@ -1,0 +1,28 @@
+---
+import type { Block } from '../../lib/cms'
+import { richTextToHTML } from '../../lib/richtext'
+
+type Props = { block: Extract<Block, { blockType: 'richText' }> }
+const { block } = Astro.props
+---
+
+<section class="section" id={block.anchor || undefined}>
+  <div class="section-container">
+    <div class="card content-block">
+      {block.heading && <h2 class="section-title">{block.heading}</h2>}
+      <div class="rich-text" set:html={richTextToHTML(block.content)} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .content-block {
+    padding: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .content-block {
+      padding: 1.5rem;
+    }
+  }
+</style>
