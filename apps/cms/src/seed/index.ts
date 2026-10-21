@@ -20,5 +20,10 @@ const seedAdmin = async (payload: Payload) => {
 
 const payload = await getPayload({ config })
 await seedAdmin(payload)
-for (const seed of [fuelMechanical, shPoniesDesserts]) await seedTenant(payload, seed, assets)
+// SEED_TENANTS=slug,slug limits a run to those tenants; seeding resets their pages, so never re-seed a tenant editors already use.
+const only = process.env.SEED_TENANTS?.split(',').map((s) => s.trim()).filter(Boolean)
+for (const seed of [fuelMechanical, shPoniesDesserts]) {
+  if (only && !only.includes(seed.tenant.slug)) continue
+  await seedTenant(payload, seed, assets)
+}
 process.exit(0)
