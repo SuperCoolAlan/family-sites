@@ -100,10 +100,10 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  fallbackLocale: null;
+  fallbackLocale: ('false' | 'none' | 'null') | false | null | ('es' | 'en') | ('es' | 'en')[];
   globals: {};
   globalsSelect: {};
-  locale: null;
+  locale: 'es' | 'en';
   widgets: {
     collections: CollectionsWidget;
   };
@@ -189,6 +189,10 @@ export interface Tenant {
    */
   domain?: string | null;
   /**
+   * Languages this site is published in. Editors only see these in the language picker.
+   */
+  languages: ('es' | 'en')[];
+  /**
    * POSTed (debounced) when this site's content is published.
    */
   pagesDeployHookUrl?: string | null;
@@ -210,7 +214,7 @@ export interface HeroBlock {
     | {
         label: string;
         /**
-         * A page path like /contact, a phone link like tel:+19185550100, or a full https:// URL.
+         * A page path like /contact (sites with several languages add the language prefix themselves), a phone link like tel:+19185550100, or a full https:// URL.
          */
         href: string;
         style?: ('primary' | 'secondary') | null;
@@ -477,7 +481,7 @@ export interface CTABlock {
     | {
         label: string;
         /**
-         * A page path like /contact, a phone link like tel:+19185550100, or a full https:// URL.
+         * A page path like /contact (sites with several languages add the language prefix themselves), a phone link like tel:+19185550100, or a full https:// URL.
          */
         href: string;
         id?: string | null;
@@ -1277,6 +1281,7 @@ export interface TenantsSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   domain?: T;
+  languages?: T;
   pagesDeployHookUrl?: T;
   updatedAt?: T;
   createdAt?: T;

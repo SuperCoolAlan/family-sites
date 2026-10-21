@@ -1,22 +1,27 @@
 // Public business info only (from the published draft site); this repo is public.
+import type { TenantSeed } from './lib'
 import { doc, p } from './richtext'
 
-export const tenant = {
+// English-only: everything is saved in the `en` locale and the site requests ?locale=en.
+const tenant = {
   name: 'Fuel Mechanical LLC',
   slug: 'fuel-mechanical',
   domain: 'fuelmechanical.asandov.com',
+  languages: ['en' as const],
 }
+
+const en = <T>(data: T) => ({ en: data })
 
 const PHONE = '(918) 991-2324'
 const TEL = 'tel:+19189912324'
 const FACEBOOK = 'https://www.facebook.com/fuelmechanical'
 
-export const media = [
-  { key: 'logo', file: 'fuel-mechanical-logo.png', alt: 'Fuel Mechanical LLC logo' },
-  { key: 'logoOnDark', file: 'fuel-mechanical-logo-white.png', alt: 'Fuel Mechanical LLC logo (white)' },
-] as const
+const media = [
+  { key: 'logo', file: 'fuel-mechanical-logo.png', alt: en('Fuel Mechanical LLC logo') },
+  { key: 'logoOnDark', file: 'fuel-mechanical-logo-white.png', alt: en('Fuel Mechanical LLC logo (white)') },
+]
 
-export const services = [
+const services = [
   {
     slug: 'hvac-installation-repair',
     title: 'HVAC Installation & Repair',
@@ -79,14 +84,14 @@ export const services = [
   },
 ].map((s, i) => ({ ...s, order: (i + 1) * 10 }))
 
-export const footerServiceSlugs = [
+const footerServiceSlugs = [
   'hvac-installation-repair',
   'heating-maintenance',
   'air-conditioning',
   'water-heaters',
 ]
 
-export const projects = [
+const projects = [
   {
     slug: 'residential-hvac-system',
     title: 'Residential HVAC System',
@@ -107,7 +112,7 @@ export const projects = [
   },
 ]
 
-export const contactForm = {
+const contactForm = {
   title: 'Contact - Fuel Mechanical',
   submitButtonLabel: 'Send Message',
   confirmationType: 'message' as const,
@@ -143,7 +148,7 @@ export const contactForm = {
   ],
 }
 
-export const settings = {
+const settings = {
   businessName: 'Fuel Mechanical LLC',
   shortName: 'Fuel Mechanical',
   tagline: 'Heating & Cooling',
@@ -180,7 +185,7 @@ const callCTA = {
 }
 
 // `form` is filled in by the seed runner once the form exists.
-export const pages = (formId: number | string) => [
+const pages = (formId: number | string) => [
   {
     slug: 'home',
     title: 'Home',
@@ -317,3 +322,19 @@ export const pages = (formId: number | string) => [
   },
 ]
 
+
+export const fuelMechanical: TenantSeed = {
+  tenant,
+  media,
+  services: services.map(en),
+  projects: projects.map((pr) => en({ ...pr, service: null })),
+  forms: { contact: en(contactForm) },
+  settings: (refs) =>
+    en({
+      ...settings,
+      logo: refs.media.logo,
+      logoOnDark: refs.media.logoOnDark,
+      footerServices: footerServiceSlugs.map((s) => refs.services[s]),
+    }),
+  pages: (refs) => pages(refs.forms.contact).map(en),
+}

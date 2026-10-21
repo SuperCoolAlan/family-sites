@@ -20,6 +20,7 @@ import { SiteSettings } from './collections/SiteSettings'
 import { Tenants } from './collections/Tenants'
 import { Users } from './collections/Users'
 import { env } from './env'
+import { localization } from './localization'
 import { protectSubmission, submissionTenantFromForm } from './forms/protect'
 import { deployAfterChange, deployAfterDelete } from './hooks/deploy'
 import { migrations } from './migrations'
@@ -41,6 +42,7 @@ export default buildConfig({
   },
   collections: [Pages, Services, Projects, Media, SiteSettings, Tenants, Users],
   editor: lexicalEditor(),
+  localization,
   cors: origins,
   csrf: origins,
   db: postgresAdapter({

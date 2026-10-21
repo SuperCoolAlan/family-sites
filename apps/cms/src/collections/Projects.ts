@@ -13,10 +13,10 @@ export const Projects: CollectionConfig = {
   hooks: { afterChange: [deployAfterChange], afterDelete: [deployAfterDelete] },
   defaultSort: '-completedOn',
   fields: [
-    { name: 'title', type: 'text', required: true },
+    { name: 'title', type: 'text', required: true, localized: true },
     slugField('projects'),
-    { name: 'category', type: 'text', admin: { description: 'Short label on the card, e.g. "HVAC Installation".' } },
-    { name: 'summary', type: 'textarea', required: true },
+    { name: 'category', type: 'text', localized: true, admin: { description: 'Short label on the card, e.g. "HVAC Installation".' } },
+    { name: 'summary', type: 'textarea', required: true, localized: true },
     { name: 'location', type: 'text', admin: { position: 'sidebar' } },
     { name: 'completedOn', type: 'date', admin: { position: 'sidebar', date: { pickerAppearance: 'monthOnly' } } },
     { name: 'service', type: 'relationship', relationTo: 'services', admin: { position: 'sidebar' } },
@@ -27,9 +27,9 @@ export const Projects: CollectionConfig = {
       labels: { singular: 'Photo', plural: 'Photos' },
       fields: [
         { name: 'image', type: 'upload', relationTo: 'media', required: true },
-        { name: 'caption', type: 'text' },
+        { name: 'caption', type: 'text', localized: true },
       ],
     },
-    { name: 'description', type: 'richText' },
+    { name: 'description', type: 'richText', localized: true },
   ],
 }

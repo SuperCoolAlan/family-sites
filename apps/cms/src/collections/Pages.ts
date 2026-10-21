@@ -14,7 +14,7 @@ export const Pages: CollectionConfig = {
   hooks: { afterChange: [deployAfterChange], afterDelete: [deployAfterDelete] },
   defaultSort: 'navOrder',
   fields: [
-    { name: 'title', type: 'text', required: true },
+    { name: 'title', type: 'text', required: true, localized: true },
     slugField('pages'),
     {
       name: 'navOrder',

@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { superAdminField, superAdminOnly } from '../access'
+import { localeOptions } from '../localization'
 
 export const Tenants: CollectionConfig = {
   slug: 'tenants',
@@ -24,6 +25,15 @@ export const Tenants: CollectionConfig = {
       admin: { description: 'Matches TENANT_SLUG in the site build, e.g. fuel-mechanical.' },
     },
     { name: 'domain', type: 'text', admin: { description: 'Public hostname, e.g. fuelmechanical.asandov.com' } },
+    {
+      name: 'languages',
+      type: 'select',
+      hasMany: true,
+      required: true,
+      defaultValue: ['es', 'en'],
+      options: localeOptions,
+      admin: { description: 'Languages this site is published in. Editors only see these in the language picker.' },
+    },
     {
       name: 'pagesDeployHookUrl',
       label: 'Cloudflare Pages deploy hook URL',

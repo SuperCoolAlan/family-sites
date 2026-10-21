@@ -12,10 +12,10 @@ export const Services: CollectionConfig = {
   hooks: { afterChange: [deployAfterChange], afterDelete: [deployAfterDelete] },
   defaultSort: 'order',
   fields: [
-    { name: 'title', type: 'text', required: true },
+    { name: 'title', type: 'text', required: true, localized: true },
     slugField('services'),
     { name: 'order', type: 'number', admin: { position: 'sidebar', description: 'Lowest shows first.' } },
-    { name: 'summary', type: 'textarea', required: true, admin: { description: 'One or two sentences shown on service cards.' } },
+    { name: 'summary', type: 'textarea', required: true, localized: true, admin: { description: 'One or two sentences shown on service cards.' } },
     {
       name: 'icon',
       type: 'select',
@@ -33,6 +33,6 @@ export const Services: CollectionConfig = {
       ],
     },
     { name: 'image', type: 'upload', relationTo: 'media' },
-    { name: 'description', type: 'richText' },
+    { name: 'description', type: 'richText', localized: true },
   ],
 }

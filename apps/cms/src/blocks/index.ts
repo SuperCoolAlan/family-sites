@@ -7,9 +7,9 @@ export const Hero: Block = {
   slug: 'hero',
   interfaceName: 'HeroBlock',
   fields: [
-    { name: 'heading', type: 'text', required: true },
-    { name: 'tagline', type: 'text' },
-    { name: 'subheading', type: 'textarea' },
+    { name: 'heading', type: 'text', required: true, localized: true },
+    { name: 'tagline', type: 'text', localized: true },
+    { name: 'subheading', type: 'textarea', localized: true },
     { name: 'showLogo', type: 'checkbox', defaultValue: false },
     { name: 'backgroundImage', type: 'upload', relationTo: 'media' },
     {
@@ -42,8 +42,8 @@ export const RichText: Block = {
   slug: 'richText',
   interfaceName: 'RichTextBlock',
   fields: [
-    { name: 'heading', type: 'text' },
-    { name: 'content', type: 'richText', required: true },
+    { name: 'heading', type: 'text', localized: true },
+    { name: 'content', type: 'richText', required: true, localized: true },
     { name: 'anchor', type: 'text', admin: { description: 'Optional id so links like /about#our-story jump here.' } },
   ],
 }
@@ -52,8 +52,8 @@ export const ServicesGrid: Block = {
   slug: 'servicesGrid',
   interfaceName: 'ServicesGridBlock',
   fields: [
-    { name: 'heading', type: 'text', defaultValue: 'Our Services' },
-    { name: 'intro', type: 'textarea' },
+    { name: 'heading', type: 'text', defaultValue: 'Our Services', localized: true },
+    { name: 'intro', type: 'textarea', localized: true },
     {
       name: 'services',
       type: 'relationship',
@@ -69,8 +69,8 @@ export const Gallery: Block = {
   slug: 'gallery',
   interfaceName: 'GalleryBlock',
   fields: [
-    { name: 'heading', type: 'text' },
-    { name: 'intro', type: 'textarea' },
+    { name: 'heading', type: 'text', localized: true },
+    { name: 'intro', type: 'textarea', localized: true },
     {
       name: 'source',
       type: 'select',
@@ -96,7 +96,7 @@ export const Gallery: Block = {
       admin: { condition: (_, s) => s?.source === 'images' },
       fields: [
         { name: 'image', type: 'upload', relationTo: 'media', required: true },
-        { name: 'caption', type: 'text' },
+        { name: 'caption', type: 'text', localized: true },
       ],
     },
   ],
@@ -106,13 +106,13 @@ export const Testimonials: Block = {
   slug: 'testimonials',
   interfaceName: 'TestimonialsBlock',
   fields: [
-    { name: 'heading', type: 'text', defaultValue: 'What Our Customers Say' },
+    { name: 'heading', type: 'text', defaultValue: 'What Our Customers Say', localized: true },
     {
       name: 'items',
       type: 'array',
       minRows: 1,
       fields: [
-        { name: 'quote', type: 'textarea', required: true },
+        { name: 'quote', type: 'textarea', required: true, localized: true },
         { name: 'author', type: 'text', required: true },
         { name: 'location', type: 'text' },
       ],
@@ -125,8 +125,8 @@ export const CTA: Block = {
   interfaceName: 'CTABlock',
   labels: { singular: 'Call to action', plural: 'Calls to action' },
   fields: [
-    { name: 'heading', type: 'text', required: true },
-    { name: 'text', type: 'textarea' },
+    { name: 'heading', type: 'text', required: true, localized: true },
+    { name: 'text', type: 'textarea', localized: true },
     {
       name: 'tone',
       type: 'select',
@@ -144,8 +144,8 @@ export const ContactForm: Block = {
   slug: 'contactForm',
   interfaceName: 'ContactFormBlock',
   fields: [
-    { name: 'heading', type: 'text', defaultValue: 'Send Us a Message' },
-    { name: 'intro', type: 'textarea' },
+    { name: 'heading', type: 'text', defaultValue: 'Send Us a Message', localized: true },
+    { name: 'intro', type: 'textarea', localized: true },
     { name: 'form', type: 'relationship', relationTo: 'forms', required: true },
     {
       name: 'showContactInfo',
@@ -160,8 +160,8 @@ export const BookingEmbed: Block = {
   slug: 'bookingEmbed',
   interfaceName: 'BookingEmbedBlock',
   fields: [
-    { name: 'heading', type: 'text', defaultValue: 'Book Online' },
-    { name: 'intro', type: 'textarea' },
+    { name: 'heading', type: 'text', defaultValue: 'Book Online', localized: true },
+    { name: 'intro', type: 'textarea', localized: true },
     {
       name: 'useSiteDefault',
       type: 'checkbox',
@@ -197,14 +197,14 @@ export const FAQ: Block = {
   interfaceName: 'FAQBlock',
   labels: { singular: 'FAQ', plural: 'FAQs' },
   fields: [
-    { name: 'heading', type: 'text', defaultValue: 'Frequently Asked Questions' },
+    { name: 'heading', type: 'text', defaultValue: 'Frequently Asked Questions', localized: true },
     {
       name: 'items',
       type: 'array',
       minRows: 1,
       fields: [
-        { name: 'question', type: 'text', required: true },
-        { name: 'answer', type: 'textarea', required: true },
+        { name: 'question', type: 'text', required: true, localized: true },
+        { name: 'answer', type: 'textarea', required: true, localized: true },
       ],
     },
   ],
@@ -215,14 +215,14 @@ export const FeatureList: Block = {
   interfaceName: 'FeaturesBlock',
   labels: { singular: 'Feature cards', plural: 'Feature cards' },
   fields: [
-    { name: 'heading', type: 'text' },
+    { name: 'heading', type: 'text', localized: true },
     {
       name: 'items',
       type: 'array',
       minRows: 1,
       fields: [
-        { name: 'title', type: 'text', required: true },
-        { name: 'text', type: 'textarea' },
+        { name: 'title', type: 'text', required: true, localized: true },
+        { name: 'text', type: 'textarea', localized: true },
       ],
     },
   ],

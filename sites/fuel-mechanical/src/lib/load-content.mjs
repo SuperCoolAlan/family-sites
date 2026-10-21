@@ -18,7 +18,8 @@ export async function fetchContent(payloadURL, tenantSlug) {
   if (!tenant) throw new Error(`tenant "${tenantSlug}" not found`)
 
   const list = async (collection, extra = {}) => {
-    const params = { 'where[tenant][equals]': String(tenant.id), limit: '200', depth: '2', ...extra }
+    // English-only tenant: Payload's default locale is es, and its fallbacks only apply when ?locale= is sent.
+    const params = { 'where[tenant][equals]': String(tenant.id), limit: '200', depth: '2', locale: 'en', ...extra }
     return (await get(base, `${collection}?${q(params)}`)).docs ?? []
   }
   const published = { 'where[_status][equals]': 'published' }

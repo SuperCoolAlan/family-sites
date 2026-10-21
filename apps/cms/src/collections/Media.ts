@@ -23,8 +23,9 @@ export const Media: CollectionConfig = {
       name: 'alt',
       type: 'text',
       required: true,
+      localized: true,
       admin: { description: 'Describe the photo for people using screen readers, e.g. "New furnace installed in a basement".' },
     },
-    { name: 'caption', type: 'text' },
+    { name: 'caption', type: 'text', localized: true },
   ],
 }
