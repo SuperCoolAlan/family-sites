@@ -68,7 +68,7 @@ export default buildConfig({
   typescript: { outputFile: path.resolve(dirname, 'payload-types.ts') },
   plugins: [
     formBuilderPlugin({
-      fields: { payment: false, upload: false, country: false, state: true },
+      fields: { payment: false, upload: false, country: false, state: true, date: true },
       formOverrides: {
         admin: { group: 'Forms' },
         access: { read: () => true, create: loggedIn, update: loggedIn, delete: loggedIn },
