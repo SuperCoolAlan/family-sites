@@ -1,0 +1,16 @@
+{
+  "name": "family-sites",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev:cms": "pnpm --filter @family-sites/cms dev",
+    "build:cms": "pnpm --filter @family-sites/cms build",
+    "seed": "pnpm --filter @family-sites/cms seed",
+    "typecheck": "pnpm -r typecheck",
+    "build:fuel": "pnpm --filter fuel-mechanical build"
+  }
+}

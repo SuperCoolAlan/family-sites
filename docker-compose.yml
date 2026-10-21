@@ -1,0 +1,40 @@
+# Local dev only: Postgres stands in for the CNPG cluster, SeaweedFS for Cloudflare R2
+# (MinIO no longer publishes container images). Credentials here are throwaway local values.
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: payload
+      POSTGRES_PASSWORD: payload
+      POSTGRES_DB: payload
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U payload']
+      interval: 5s
+      retries: 10
+
+  s3:
+    image: chrislusf/seaweedfs:4.48
+    # Anonymous identity in s3.json has Read only, mirroring an R2 public bucket.
+    command: server -dir=/data -s3 -s3.port=9000 -s3.config=/etc/seaweedfs/s3.json -master.volumeSizeLimitMB=256
+    ports:
+      - '9000:9000'
+    volumes:
+      - s3data:/data
+      - ./dev/s3.json:/etc/seaweedfs/s3.json:ro
+
+  s3-init:
+    image: chrislusf/seaweedfs:4.48
+    depends_on: [s3]
+    restart: on-failure
+    entrypoint: ['sh', '-c']
+    # Fails (and restarts) until the master is up; "already exists" on later runs is fine.
+    command:
+      - echo "s3.bucket.create -name cms-asandov-com" | weed shell -master=s3:9333 2>&1 | grep -E "created|exist"
+
+volumes:
+  pgdata:
+  s3data:

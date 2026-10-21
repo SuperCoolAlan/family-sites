@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+
+# next / payload
+apps/cms/.next/
+apps/cms/media/
+apps/cms/next-env.d.ts
+*.tsbuildinfo
+
+# astro
+sites/*/dist/
+sites/*/.astro/

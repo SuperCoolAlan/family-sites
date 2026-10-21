@@ -1,0 +1,13 @@
+{
+  "identities": [
+    {
+      "name": "anonymous",
+      "actions": ["Read"]
+    },
+    {
+      "name": "local-dev",
+      "credentials": [{ "accessKey": "devaccesskey", "secretKey": "devsecretkey" }],
+      "actions": ["Admin", "Read", "Write", "List", "Tagging"]
+    }
+  ]
+}
